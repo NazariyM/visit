@@ -15,3 +15,23 @@ block main
 	include ../components/rest
 
 	include ../components/contactMap
+
+	// begin request pop-up
+	+b.popup._request(data-popup-id='requestPopup', tabindex='-1', role='dialog')
+		+e.container
+			+e.close.js-popup-close
+				+i('close')
+			+e.inner
+				+e.H5.title Оставьте данные и мы свяжемся с вами в ближайшее время
+				+e.FORM(action='#!' method='POST')
+					+e.form-field
+						+e.INPUT.input(type='text' placeholder='Ваше имя' name='' required)
+						+i('user')
+					+e.form-field
+						+e.INPUT.input(type='email' placeholder='Ваш email' name='' required)
+						+i('email')
+					+e.form-field
+						+e.INPUT.input(type='tel' placeholder='Ваш телефон' name='' required)
+						+i('phone')
+
+					+e.INPUT.submit-btn.btn._white(type='submit' value='Оставить заявку')

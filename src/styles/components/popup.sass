@@ -1,0 +1,163 @@
+.popup
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	opacity: 0
+	visibility: hidden
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+	z-index: 1050
+	overflow: auto
+	outline: 0
+	text-align: center
+	font-size: 0
+	transform: translate3d(0, 0, 0)
+	background-color: rgba(#131313, .7)
+	transition: opacity .3s ease, transform .5s ease, visibility .5s
+	will-change: opacity, transform
+	$parent: &
+	&:after
+		content: ''
+		display: inline-block
+		vertical-align: middle
+		width: 0
+		height: 100%
+	&.opened
+		opacity: 1
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+		visibility: visible
+	&__close
+		position: absolute
+		top: -17px
+		right: -17px
+		cursor: pointer
+		width: 37px
+		height: 37px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #f39200
+		+trs
+		.no-touch &:hover::after
+			background-color: #f39200
+		&::after
+			position: absolute
+			top: 3px
+			left: 3px
+			right: 3px
+			bottom: 3px
+			background: #fff
+			border-radius: 50%
+			content: ''
+			z-index: 1
+			+trs
+		.no-touch &:hover .icon
+			fill: #fff
+		.no-touch &:active .icon
+			fill: #fff
+		.icon
+			fill: #f39200
+			font-size: 18px
+			z-index: 2
+			+trs
+		
+	&__container
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		max-width: 600px
+		position: relative
+		padding: 40px 0 30px
+		background: $white
+		box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2)
+		margin: 30px auto
+		transition: opacity .5s ease, transform .5s ease
+		transform: translate3d(0, -100px, 0)
+		will-change: transform, opacity
+		border-radius: 10px
+		#{$parent}_request &
+			max-width: 498px
+			background-color: #e38902
+		#{$parent}_story &
+			position: relative
+			min-width: 880px
+			padding: 15px 30px 25px 15px
+			background-color: #fff
+			&::after
+				position: absolute
+				border-top: 1px solid #be7266
+				height: 10px
+				left: 0
+				right: 0
+				bottom: -2px
+				background: #e38902
+				border-radius: 0 0 10px 10px
+				content: ''
+		
+	&__inner
+		max-width: 314px
+		margin: 0 auto
+	&__title
+		margin-bottom: 23px
+		color: #fff
+		font-size: 18px
+	&__form
+		&-field
+			position: relative
+			&:not(:first-child)
+				margin-top: 9px
+			.icon
+				position: absolute
+				top: 12px
+				left: 14px
+				z-index: 1
+				fill: #343434
+				font-size: 19px
+				&-user
+					font-size: 20px
+	&__input
+		width: 100%
+		height: 46px
+		padding: 0 14px 0 47px
+		border-radius: 10px!important
+		outline: 0
+		border: 0
+		background: #fff
+		color: #000
+		+f('hel-400', 14)
+		+placeholder-color(#343434)
+	&__submit-btn
+		margin-top: 20px
+		
+	&__person
+		+clr
+		&-img
+			float: left
+			width: 226px
+		&-text
+			float: left
+			width: calc(100% - 226px)
+			padding-left: 22px
+			text-align: left
+			p
+				font-size: 14px
+				color: #4e4e4e
+				&:not(:first-child)
+					margin-top: 15px
+		&-name
+			margin-bottom: 18px
+			font-size: 18px
+		
+body.popup-opened
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	overflow: hidden
+
+.popup.opened .popup__container
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)

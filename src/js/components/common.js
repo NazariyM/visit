@@ -1,6 +1,7 @@
 import './noTouch';
 import CTabs from './c-tabs';
 import Dot from './initDot';
+import './popupInit';
 import objectFitImages from 'object-fit-images';
 import fancyBox from '@fancyapps/fancybox';
 import { showReasons } from './showReasons';

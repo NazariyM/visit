@@ -14,7 +14,7 @@ export function initSliders() {
     dots: false,
     cssEase: 'ease',
     useTransform: true,
-    infinite: false,
+    infinite: true,
     accessibility: false,
     rows: 0,
     dotsClass: 'slider-dots'

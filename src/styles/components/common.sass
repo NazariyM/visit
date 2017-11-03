@@ -43,7 +43,8 @@ body
   display: inline-block
   vertical-align: top
   padding: 19px 30px
-  border-radius: 10px
+  border-radius: 10px!important
+  border: 0
   background-color: #f39200
   color: $white
   +f('hel-700', 20, 20)
@@ -60,6 +61,15 @@ body
   &_has-blue-bg
     .no-touch &:hover
       background: #ff7200
+  &_white
+    padding: 16px 22px
+    background: #fff
+    color: #e38902
+    font-size: 14px
+    line-height: 1
+    .no-touch &:hover
+      background: #fff
+      color: #e38902
     
 // help classes
 .underline
@@ -69,6 +79,7 @@ body
     border-bottom-color: rgba(#fff, .7)
     color: #e9e9e9
   &_blue
+    font-size: 14px
     color: #1b69ac
     border-bottom-color: currentColor
     .no-touch &:hover

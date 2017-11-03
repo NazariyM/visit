@@ -4,15 +4,29 @@
 		+e.contact-container.container
 			+e.A.logo(href='#!')
 				+e.IMG(src='static/img/logo.png' alt='Визит')
+
 			+b.contact-line._header
 				+e.item.contact-line__address
-					+e.SPAN Адреса офисов
+					+b.dropdown
+						+e.line
+							+i('loc')
+							+e.text Адреса офисов
+							+i('arr-d')
+						+e.UL
+							li: a(href='#!') ул. Революционная, 126
+							li: a(href='#!') ул. Победы, 16
+							li: a(href='#!') ул. Победы, 108
+							li: a(href='#!') ул. Стара-Загора, 53
+							li: a(href='#!') ул. Мичурина, 116
+
 				+e.item.contact-line__mail
-					a.underline(href='mailto:mail.com') Написать нам
+					a(href='mailto:mail.com')
+						+i('email')
+						+e.SPAN Написать нам
 				+e.item.contact-line__tel
 					+e.A(href='tel:+78462265058')
-						+e.SPAN +7 (846)
-						= ' '
+						+i('phone')
+						+e.SPAN +7 (846)&nbsp;
 						| 226-50-58
 
 	+b.NAV.nav
