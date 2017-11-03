@@ -1,0 +1,48 @@
+include ../bemto/index
+include ../partials/helpers
+
+- var suffix = production ? '.min' : '';
+
+doctype html
+html(lang='ru')
+
+	block variables
+		- var title = defaultPageTitle;
+
+	block head
+		head
+			meta(name='format-detection', content='telephone=no')
+			meta(charset='utf-8')
+			meta(http-equiv='X-UA-Compatible', content='IE=edge')
+			meta(name='viewport', content='width=device-width, initial-scale=1.0')
+			title= title
+			link(href='static/css/index' + suffix + '.css', rel='stylesheet')
+			link(rel='icon', href='static/favicon.ico')
+
+	block body
+		body
+			// SVG
+			block svg
+				div.svg-container(style="position: absolute; width: 0; height: 0; overflow: hidden;")
+					include ../partials/_sprite.svg
+
+			// picture element HTML5 shiv
+			block inlineScripts
+				script.
+					document.createElement('picture');
+
+			block header
+				include ../components/header
+
+			block main
+				main
+
+			block footer
+				include ../components/footer
+
+			// Scripts
+			block scripts
+				if contactMap !== false
+					script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type='text/javascript')
+				script(src='static/js/index.jquery' + suffix + '.js')
+				script(src='static/js/index' + suffix + '.js')

@@ -1,0 +1,36 @@
+if rest ? rest : rest = []
+if rest.title ? rest.title : rest.title = 'ХОРОШО РАБОТАЕМ – ОТЛИЧНО ОТДЫХАЕМ'
+
+//begin rest
++b.SECTION.rest(class= rest.classMod ? rest.classMod : '')
+	+e.container.container
+		+b.H2.title-md= rest.title
+		+e.descr
+			+e.P Мы не боимся трудностей, с радостью и энтузиазмом ставим себе амбициозные цели и гордимся своими успехами.
+			+e.P Вне рабочих задач мы тоже много общаемся и собираемся вместе, чтобы провести выходные, отметить праздники или научиться чему-то новому.  
+
+		+e.photos
+			-i = 1
+			while i < 5
+				+e.A.photos-img-big(href='static/img/content/rest-big-img.jpg' data-fancybox='rest-photos-1')
+					+e.DIV.IMG(src=`static/img/content/rest-${i}.jpg` alt='image')
+					+e.DIV.photos-icon
+						+i('play')
+				-i++
+
+			+e.photos-descr
+				+e.P Например, стандартные праздники типа Дня рождения Компании или Нового года уже ушли далеко за пределы простого корпоратива и стали настоящим марафоном событий, которые проводятся силами наших коллег и партнёров: тимбилдинг, творческий мастер-класс «Лучшее блюдо»,  интеллектуальные квесты, подарки своими руками и многое другое.
+
+		+e.photos
+			-j = 5
+			while j < 9
+				+e.A.photos-img-big._blue-bg(href='static/img/content/rest-big-img.jpg' data-fancybox='rest-photos-2')
+					+e.DIV.IMG(src=`static/img/content/rest-${j}.jpg` alt='image')
+					+e.DIV.photos-icon
+						+i('loupe')
+				-j++
+
+			+e.photos-descr
+				+e.P Помимо праздников есть много крупных профессиональных мероприятий и конференций, на которых есть возможность  обменяться опытом с коллегами из разных проектов.
+
+		+e.BUTTON.want-btn.btn(type='button') ХОЧУ СТАТЬ ЧАСТЬЮ КОМАНДЫ “ВИЗИТ”

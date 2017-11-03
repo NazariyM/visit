@@ -1,0 +1,26 @@
+//begin success
++b.SECTION.success
+	+e.container.container
+		+b.H2.title-md._white ИСТОРИИ УСПЕХА КОГДА СБЫВАЮТСЯ МЕЧТЫ
+
+		+e.slider.js-success-slider.owl-carousel
+			-i = 0
+			while i < 3
+				+e.person
+					+e.person-img
+						+e.IMG(src='static/img/content/success-julia.jpg' alt='image')
+					+e.person-text
+						+e.person-name Юлия Хмелевская
+						+e.P Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.
+						+e.person-more-text.underline Читать полностью
+
+				+e.person
+					+e.person-img
+						+e.IMG(src='static/img/content/success-ivan.jpg' alt='image')
+					+e.person-text
+						+e.H5.person-name Иван Николаев
+						+e.P Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...
+						+e.person-more-text.underline Читать полностью
+				-i++
+
+		+e.BUTTON.succes-btn.btn._has-blue-bg(type='button') ХОЧУ ВОЙТИ В ИСТОРИЮ КОМПАНИИ “Визит”

@@ -1,0 +1,31 @@
+//begin header
++b.HEADER.header
+	+e.contact
+		+e.contact-container.container
+			+e.A.logo(href='#!')
+				+e.IMG(src='static/img/logo.png' alt='Визит')
+			+b.contact-line._header
+				+e.item.contact-line__address
+					+e.SPAN Адреса офисов
+				+e.item.contact-line__mail
+					a.underline(href='mailto:mail.com') Написать нам
+				+e.item.contact-line__tel
+					+e.A(href='tel:+78462265058')
+						+e.SPAN +7 (846)
+						= ' '
+						| 226-50-58
+
+	+b.NAV.nav
+		+e.UL.list.container
+			-
+				navList = [
+				'Алгоритм работы',
+				'Экономия во всем',
+				'Пример подбора недвижимости',
+				'О компании',
+				'Отзывы',
+				'Контакты'
+				]
+			for navLink, index in navList
+				-activeIndex = 1
+				li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink

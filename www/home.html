@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <!--	- var contactMap = false;-->
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визит</title>
+    <link href="static/css/index.css" rel="stylesheet">
+    <link rel="icon" href="static/favicon.ico">
+  </head>
+  <body>
+    <!-- SVG-->
+    <div class="svg-container" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-arr-l" viewBox="0 0 477.175 477.175">
+          <path d="M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1l-215.4-215.5z" />
+        </symbol>
+        <symbol id="icon-arr-r" viewBox="0 0 477.175 477.175">
+          <path d="M360.731 229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z" />
+        </symbol>
+        <symbol id="icon-loupe" viewBox="0 0 511.999 511.999">
+          <path d="M496.131 435.698L374.855 332.551c-12.537-11.283-25.945-16.463-36.777-15.963C366.707 283.055 384 239.549 384 192 384 85.961 298.039 0 192 0 85.962 0 0 85.961 0 192s85.961 192 192 192c47.549 0 91.055-17.293 124.588-45.922-.5 10.831 4.68 24.238 15.963 36.775L435.697 496.13c17.662 19.623 46.512 21.277 64.109 3.678 17.6-17.599 15.948-46.449-3.675-64.11zM192 320c-70.692 0-128-57.309-128-128 0-70.692 57.308-128 128-128 70.691 0 128 57.308 128 128 0 70.691-57.307 128-128 128z"
+          />
+        </symbol>
+        <symbol id="icon-play" viewBox="0 0 41.999 41.999">
+          <path d="M36.068 20.176l-29-20A1 1 0 1 0 5.5.999v40a1 1 0 0 0 1.568.823l29-20a.999.999 0 0 0 0-1.646z" />
+        </symbol>
+      </svg>
+    </div>
+    <!-- picture element HTML5 shiv-->
+    <script>
+      document.createElement('picture');
+    </script>
+    <!--begin header-->
+    <header class="header">
+      <div class="header__contact">
+        <div class="header__contact-container container">
+          <a class="header__logo" href="#!">
+            <img src="static/img/logo.png" alt="Визит" title="" />
+          </a>
+          <div class="contact-line contact-line_header">
+            <div class="contact-line__item contact-line__address">
+              <span>Адреса офисов</span>
+            </div>
+            <div class="contact-line__item contact-line__mail">
+              <a class="underline" href="mailto:mail.com">Написать нам</a>
+            </div>
+            <div class="contact-line__item contact-line__tel">
+              <a href="tel:+78462265058">
+                <span>+7 (846)</span> 226-50-58</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list container">
+          <li class="is-active">
+            <a href="#!">Алгоритм работы</a>
+          </li>
+          <li>
+            <a href="#!">Экономия во всем</a>
+          </li>
+          <li>
+            <a href="#!">Пример подбора недвижимости</a>
+          </li>
+          <li>
+            <a href="#!">О компании</a>
+          </li>
+          <li>
+            <a href="#!">Отзывы</a>
+          </li>
+          <li>
+            <a href="#!">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content"></main>
+    <!--begin career-->
+    <section class="career">
+      <div class="career__container container">
+        <div class="career__text">
+          <h2 class="career__title title-lg">КАРЬЕРА В КОМПАНИИ</h2>
+          <h4 class="career__sub-title">Для обычных людей с необычными мечтами.</h4>
+          <p>Мы поможем Вам хорошо зарабатывать и профессионально развиваться.</p>
+          <p>Начните свою карьеру с «Визит» и станьте на шаг ближе к своим мечтам!</p>
+          <a class="career__want-btn btn btn_has-blue-bg" href="#!">ХОЧУ РАБОТАТЬ</a>
+        </div>
+        <div class="c-tabs c-tabs_career">
+          <div class="c-tabs__tabs-nav">
+            <div class="c-tabs__tabs-el is-active">
+              <span>Специалист отдела
+                <br/>коммерческой недвижимости</span>
+            </div>
+            <div class="c-tabs__tabs-el">
+              <span>Специалист отдела
+                <br/>жилой недвижимости</span>
+            </div>
+            <div class="c-tabs__tabs-el">
+              <span>Интернет-маркетолог</span>
+            </div>
+            <div class="c-tabs__tabs-el">
+              <span>Юрист-оформитель</span>
+            </div>
+            <div class="c-tabs__tabs-el">
+              <span>Менеджер по персоналу</span>
+            </div>
+          </div>
+          <div class="c-tabs__tabs-for">
+            <div class="c-tabs__tab">
+              <div class="c-tabs__tab-in">
+                <p>
+                  <strong>Группа компаний "Визит" -</strong> комплекс услуг в сфере недвижимости и права для частных клиентов и для бизнеса,
+                  <strong>признанный лидер</strong> рынка недвижимости г. Самара. На протяжении 16 лет мы помогаем своим клиентам обрести квартиры своей мечты.</p>
+                <p>Постоянно развиваясь и открывая новые офисы, мы предлагаем нашим сотрудникам широкие перспективы для карьерного роста и уверенность в завтрашнем дне.</p>
+                <p>С нами Вы получите бесценный опыт, который для некоторой будет отправной точки, а для других станет трамплином в профессиональной карьере. </p>
+                <p>
+                  <strong>В нашей компании работают более 120 профессионалов, станьте и Вы частью команды! </strong>
+                </p>
+                <p>В связи с расширением бизнеса и открытием новых отделов продаж, приглашаем в нашу команду
+                  <strong>Специалиста отдела коммерческой недвижимости. </strong>
+                </p>
+                <div class="c-tabs__more">
+                  <a class="underline underline_blue" href="#!">Подробнее о вакансии</a>
+                </div>
+              </div>
+            </div>
+            <div class="c-tabs__tab">
+              <div class="c-tabs__tab-in">
+                <p>
+                  <strong>Группа компаний "Визит" -</strong> комплекс услуг в сфере недвижимости и права для частных клиентов и для бизнеса,
+                  <strong>признанный лидер</strong> рынка недвижимости г. Самара. На протяжении 16 лет мы помогаем своим клиентам обрести квартиры своей мечты.</p>
+                <p>Постоянно развиваясь и открывая новые офисы, мы предлагаем нашим сотрудникам широкие перспективы для карьерного роста и уверенность в завтрашнем дне.</p>
+                <p>С нами Вы получите бесценный опыт, который для некоторой будет отправной точки, а для других станет трамплином в профессиональной карьере. </p>
+                <p>
+                  <strong>В нашей компании работают более 120 профессионалов, станьте и Вы частью команды! </strong>
+                </p>
+                <p>В связи с расширением бизнеса и открытием новых отделов продаж, приглашаем в нашу команду
+                  <strong>Специалиста отдела коммерческой недвижимости. </strong>
+                </p>
+                <div class="c-tabs__more">
+                  <a class="underline underline_blue" href="#!">Подробнее о вакансии</a>
+                </div>
+              </div>
+            </div>
+            <div class="c-tabs__tab">
+              <div class="c-tabs__tab-in">
+                <p>
+                  <strong>Группа компаний "Визит" -</strong> комплекс услуг в сфере недвижимости и права для частных клиентов и для бизнеса,
+                  <strong>признанный лидер</strong> рынка недвижимости г. Самара. На протяжении 16 лет мы помогаем своим клиентам обрести квартиры своей мечты.</p>
+                <p>Постоянно развиваясь и открывая новые офисы, мы предлагаем нашим сотрудникам широкие перспективы для карьерного роста и уверенность в завтрашнем дне.</p>
+                <p>С нами Вы получите бесценный опыт, который для некоторой будет отправной точки, а для других станет трамплином в профессиональной карьере. </p>
+                <p>
+                  <strong>В нашей компании работают более 120 профессионалов, станьте и Вы частью команды! </strong>
+                </p>
+                <p>В связи с расширением бизнеса и открытием новых отделов продаж, приглашаем в нашу команду
+                  <strong>Специалиста отдела коммерческой недвижимости. </strong>
+                </p>
+                <div class="c-tabs__more">
+                  <a class="underline underline_blue" href="#!">Подробнее о вакансии</a>
+                </div>
+              </div>
+            </div>
+            <div class="c-tabs__tab">
+              <div class="c-tabs__tab-in">
+                <p>
+                  <strong>Группа компаний "Визит" -</strong> комплекс услуг в сфере недвижимости и права для частных клиентов и для бизнеса,
+                  <strong>признанный лидер</strong> рынка недвижимости г. Самара. На протяжении 16 лет мы помогаем своим клиентам обрести квартиры своей мечты.</p>
+                <p>Постоянно развиваясь и открывая новые офисы, мы предлагаем нашим сотрудникам широкие перспективы для карьерного роста и уверенность в завтрашнем дне.</p>
+                <p>С нами Вы получите бесценный опыт, который для некоторой будет отправной точки, а для других станет трамплином в профессиональной карьере. </p>
+                <p>
+                  <strong>В нашей компании работают более 120 профессионалов, станьте и Вы частью команды! </strong>
+                </p>
+                <p>В связи с расширением бизнеса и открытием новых отделов продаж, приглашаем в нашу команду
+                  <strong>Специалиста отдела коммерческой недвижимости. </strong>
+                </p>
+                <div class="c-tabs__more">
+                  <a class="underline underline_blue" href="#!">Подробнее о вакансии</a>
+                </div>
+              </div>
+            </div>
+            <div class="c-tabs__tab">
+              <div class="c-tabs__tab-in">
+                <p>
+                  <strong>Группа компаний "Визит" -</strong> комплекс услуг в сфере недвижимости и права для частных клиентов и для бизнеса,
+                  <strong>признанный лидер</strong> рынка недвижимости г. Самара. На протяжении 16 лет мы помогаем своим клиентам обрести квартиры своей мечты.</p>
+                <p>Постоянно развиваясь и открывая новые офисы, мы предлагаем нашим сотрудникам широкие перспективы для карьерного роста и уверенность в завтрашнем дне.</p>
+                <p>С нами Вы получите бесценный опыт, который для некоторой будет отправной точки, а для других станет трамплином в профессиональной карьере. </p>
+                <p>
+                  <strong>В нашей компании работают более 120 профессионалов, станьте и Вы частью команды! </strong>
+                </p>
+                <p>В связи с расширением бизнеса и открытием новых отделов продаж, приглашаем в нашу команду
+                  <strong>Специалиста отдела коммерческой недвижимости. </strong>
+                </p>
+                <div class="c-tabs__more">
+                  <a class="underline underline_blue" href="#!">Подробнее о вакансии</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--begin reason-->
+    <section class="reason">
+      <div class="reason__container container">
+        <h2 class="title-md">ПОЧЕМУ ЛЮДИ ПРИХОДЯТ К НАМ?</h2>
+        <div class="reason__inner">
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-1.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">ПРЕСТИЖНАЯ РАБОТА</h4>
+              <p class="reason__card-descr">Работа в одной из самых известных и уважаемых Компаний на рынке недвижимости Самары.</p>
+            </div>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-2.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">СОВРЕМЕННЫЙ УЧЕБНЫЙ ЦЕНТР</h4>
+              <p class="reason__card-descr">Школа риэлторов. Система повышения квалификации, семинары, тренинги, участие в конференциях.</p>
+            </div>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-3.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">ВЫСОКИЙ УРОВЕНЬ ВОЗНАГРАЖДЕНИЯ</h4>
+              <p class="reason__card-descr">Отсутствие ограничений. Уровень дохода на прямую зависит от Вашей активности.</p>
+            </div>
+          </div>
+          <div class="reason__more">
+            <button class="reason__more-btn btn js-more-reason" type="button">ПОСМОТРЕТЬ ЕЩЕ 6 ПРИЧИН РАБОТАТЬ В АН «ВИЗИТ»</button>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-4.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">Профессионализм</h4>
+              <p class="reason__card-descr">Более 16 лет на рынке недвижимости</p>
+            </div>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-5.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">Стабильность</h4>
+              <p class="reason__card-descr">Более 120 квалифицированных специалистов</p>
+            </div>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-6.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">Короткие сроки реализации проекта</h4>
+              <p class="reason__card-descr">Лучшая цена для клиента</p>
+            </div>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-7.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">Эксклюзивные выгодные предложения по ипотеке</h4>
+              <p class="reason__card-descr">для наших клиентов</p>
+            </div>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-8.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">Собственная база недвижимости</h4>
+              <p class="reason__card-descr">Одна из самых крупных в Самарской области</p>
+            </div>
+          </div>
+          <div class="reason__card">
+            <div class="reason__card-img">
+              <img src="static/img/content/reason-9.jpg" alt="image" title="" />
+            </div>
+            <div class="reason__card-text">
+              <h4 class="reason__card-title">Максимально выгодное рекламное сопровождение</h4>
+              <p class="reason__card-descr">объектов клиента</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--begin success-->
+    <section class="success">
+      <div class="success__container container">
+        <h2 class="title-md title-md_white">ИСТОРИИ УСПЕХА КОГДА СБЫВАЮТСЯ МЕЧТЫ</h2>
+        <div class="success__slider js-success-slider owl-carousel">
+          <div class="success__person">
+            <div class="success__person-img">
+              <img src="static/img/content/success-julia.jpg" alt="image" title="" />
+            </div>
+            <div class="success__person-text">
+              <div class="success__person-name">Юлия Хмелевская</div>
+              <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
+              <div
+                class="success__person-more-text underline">Читать полностью</div>
+          </div>
+        </div>
+        <div class="success__person">
+          <div class="success__person-img">
+            <img src="static/img/content/success-ivan.jpg" alt="image" title="" />
+          </div>
+          <div class="success__person-text">
+            <h5 class="success__person-name">Иван Николаев</h5>
+            <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
+            <div
+              class="success__person-more-text underline">Читать полностью</div>
+        </div>
+      </div>
+      <div class="success__person">
+        <div class="success__person-img">
+          <img src="static/img/content/success-julia.jpg" alt="image" title="" />
+        </div>
+        <div class="success__person-text">
+          <div class="success__person-name">Юлия Хмелевская</div>
+          <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
+          <div
+            class="success__person-more-text underline">Читать полностью</div>
+      </div>
+      </div>
+      <div class="success__person">
+        <div class="success__person-img">
+          <img src="static/img/content/success-ivan.jpg" alt="image" title="" />
+        </div>
+        <div class="success__person-text">
+          <h5 class="success__person-name">Иван Николаев</h5>
+          <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
+          <div
+            class="success__person-more-text underline">Читать полностью</div>
+      </div>
+      </div>
+      <div class="success__person">
+        <div class="success__person-img">
+          <img src="static/img/content/success-julia.jpg" alt="image" title="" />
+        </div>
+        <div class="success__person-text">
+          <div class="success__person-name">Юлия Хмелевская</div>
+          <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
+          <div
+            class="success__person-more-text underline">Читать полностью</div>
+      </div>
+      </div>
+      <div class="success__person">
+        <div class="success__person-img">
+          <img src="static/img/content/success-ivan.jpg" alt="image" title="" />
+        </div>
+        <div class="success__person-text">
+          <h5 class="success__person-name">Иван Николаев</h5>
+          <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
+          <div
+            class="success__person-more-text underline">Читать полностью</div>
+      </div>
+      </div>
+      </div>
+      <button class="success__succes-btn btn btn_has-blue-bg" type="button">ХОЧУ ВОЙТИ В ИСТОРИЮ КОМПАНИИ “Визит”</button>
+      </div>
+    </section>
+    <!--begin rest-->
+    <section class="rest">
+      <div class="rest__container container">
+        <h2 class="title-md">ХОРОШО РАБОТАЕМ – ОТЛИЧНО ОТДЫХАЕМ</h2>
+        <div class="rest__descr">
+          <p>Мы не боимся трудностей, с радостью и энтузиазмом ставим себе амбициозные цели и гордимся своими успехами.</p>
+          <p>Вне рабочих задач мы тоже много общаемся и собираемся вместе, чтобы провести выходные, отметить праздники или научиться чему-то новому. </p>
+        </div>
+        <div class="rest__photos">
+          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+            <img src="static/img/content/rest-1.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-play">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+            <img src="static/img/content/rest-2.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-play">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+            <img src="static/img/content/rest-3.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-play">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+            <img src="static/img/content/rest-4.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-play">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play"></use>
+              </svg>
+            </div>
+          </a>
+          <div class="rest__photos-descr">
+            <p>Например, стандартные праздники типа Дня рождения Компании или Нового года уже ушли далеко за пределы простого корпоратива и стали настоящим марафоном событий, которые проводятся силами наших коллег и партнёров: тимбилдинг, творческий мастер-класс
+              «Лучшее блюдо», интеллектуальные квесты, подарки своими руками и многое другое.</p>
+          </div>
+        </div>
+        <div class="rest__photos">
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+            <img src="static/img/content/rest-5.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-loupe">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+            <img src="static/img/content/rest-6.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-loupe">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+            <img src="static/img/content/rest-7.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-loupe">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+            <img src="static/img/content/rest-8.jpg" alt="image" title="" />
+            <div class="rest__photos-icon">
+              <svg class="icon icon-loupe">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use>
+              </svg>
+            </div>
+          </a>
+          <div class="rest__photos-descr">
+            <p>Помимо праздников есть много крупных профессиональных мероприятий и конференций, на которых есть возможность обменяться опытом с коллегами из разных проектов.</p>
+          </div>
+        </div>
+        <button class="rest__want-btn btn" type="button">ХОЧУ СТАТЬ ЧАСТЬЮ КОМАНДЫ “ВИЗИТ”</button>
+      </div>
+    </section>
+    <!--begin contact-map-->
+    <section class="contact-map">
+      <div class="contact-map__body" id="contact-map"></div>
+      <div class="contact-map__nav">
+        <h4 class="contact-map__nav-title title-md">НАШИ ОФИСЫ В САМАРЕ</h4>
+        <ul class="contact-map__nav-streets js-contact-streets">
+          <li class="is-active">
+            <a href="#!" data-str-coords="[53.199174071213186, 50.179136999999955]">
+              <svg class="icon icon-arr-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arr-r"></use>
+              </svg>
+              <span>ул. Революционная, 126</span>
+            </a>
+          </li>
+          <li>
+            <a href="#!" data-str-coords="[53.206337071231616, 50.23361099999988]">
+              <svg class="icon icon-arr-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arr-r"></use>
+              </svg>
+              <span>ул. Победы, 16 </span>
+            </a>
+          </li>
+          <li>
+            <a href="#!" data-str-coords="[53.218637071205436, 50.2605155]">
+              <svg class="icon icon-arr-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arr-r"></use>
+              </svg>
+              <span>ул. Победы, 108</span>
+            </a>
+          </li>
+          <li>
+            <a href="#!" data-str-coords="[53.22939807117525, 50.20904200000001]">
+              <svg class="icon icon-arr-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arr-r"></use>
+              </svg>
+              <span>ул. Стара-Загора, 53</span>
+            </a>
+          </li>
+          <li>
+            <a href="#!" data-str-coords="[53.21202157121727, 50.157155499999945]">
+              <svg class="icon icon-arr-r">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arr-r"></use>
+              </svg>
+              <span>ул. Мичурина, 116</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Scripts-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="static/js/index.jquery.js"></script>
+    <script src="static/js/index.js"></script>
+  </body>
+</html>

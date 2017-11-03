@@ -1,0 +1,58 @@
+if career ? career : career = []
+if career.title ? career.title : career.title = 'КАРЬЕРА В КОМПАНИИ'
+if career.subTitle ? career.subTitle : career.subTitle = 'Для обычных людей с необычными мечтами.'
+if career.descrFirst ? career.descrFirst : career.descrFirst = 'Мы поможем Вам хорошо зарабатывать и профессионально развиваться.'
+if career.descrSecond ? career.descrSecond : career.descrSecond = 'Начните свою карьеру с «Визит» и станьте на шаг ближе к своим мечтам!'
+if career.wantBtn ? career.wantBtn : career.wantBtn = 'ХОЧУ РАБОТАТЬ'
+
+//begin career
++b.SECTION.career(class= career.classMod ? career.classMod : '')
+	+e.container.container
+		+e.text
+			+e.H2.title.title-lg= career.title
+			+e.H4.sub-title= career.subTitle
+			+e.P= career.descrFirst
+			+e.P= career.descrSecond
+			+e.A.want-btn.btn._has-blue-bg(href='#!')= career.wantBtn
+
+		+b.c-tabs._career
+			+e.tabs-nav
+				+e.tabs-el.is-active
+					+e.SPAN Специалист отдела
+						+e.BR
+						| коммерческой недвижимости
+				+e.tabs-el
+					+e.SPAN Специалист отдела
+						+e.BR
+						| жилой недвижимости
+				+e.tabs-el
+					+e.SPAN Интернет-маркетолог
+				+e.tabs-el
+					+e.SPAN Юрист-оформитель
+				+e.tabs-el
+					+e.SPAN Менеджер по персоналу
+			+e.tabs-for
+				-i = 0
+				while i < 5
+					+e.tab
+						+e.tab-in
+							+e.P
+								+e.STRONG Группа компаний "Визит" -
+								= ' '
+								| комплекс услуг в сфере недвижимости и права для частных клиентов и для бизнеса,
+								+e.STRONG признанный лидер
+								= ' '
+								| рынка недвижимости г. Самара. На протяжении 16 лет мы помогаем своим клиентам обрести квартиры своей мечты.
+
+							+e.P Постоянно развиваясь и открывая новые офисы, мы предлагаем нашим сотрудникам широкие перспективы для карьерного роста и уверенность в завтрашнем дне.
+
+							+e.P С нами Вы получите бесценный опыт, который для некоторой будет отправной точки, а для других станет трамплином в профессиональной карьере.  
+
+							+e.P
+								+e.STRONG В нашей компании работают более 120 профессионалов, станьте и Вы частью команды!  
+							+e.P В связи с расширением бизнеса и открытием новых отделов продаж, приглашаем в нашу команду
+								+e.STRONG Специалиста отдела коммерческой недвижимости. 
+
+							+e.more
+								+b.A.underline._blue(href='#!') Подробнее о вакансии
+					-i++

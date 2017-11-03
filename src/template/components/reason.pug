@@ -1,0 +1,69 @@
+if reason ? reason : reason = []
+if reason.title ? reason.title : reason.title = 'ПОЧЕМУ ЛЮДИ ПРИХОДЯТ К НАМ?'
+if reason.moreBtn ? reason.moreBtn : reason.moreBtn = 'ПОСМОТРЕТЬ ЕЩЕ 6 ПРИЧИН РАБОТАТЬ В АН «ВИЗИТ»'
+
+//begin reason
++b.SECTION.reason(class= reason.classMod ? reason.classMod : '')
+	+e.container.container
+		+b.H2.title-md= reason.title
+
+		+e.inner
+
+			mixin reasonCard(item)
+				+e.card
+					+e.card-img
+						+e.IMG(src=`static/img/content/reason-${item.img}.jpg` alt='image')
+					+e.card-text
+						+e.H4.card-title= item.title
+						+e.P.card-descr= item.descr
+
+			-
+				firstReasonList = [{
+				img: 1,
+				title: 'ПРЕСТИЖНАЯ РАБОТА',
+				descr: 'Работа в одной из самых известных и уважаемых Компаний на рынке недвижимости Самары.'
+				}, {
+				img: 2,
+				title: 'СОВРЕМЕННЫЙ УЧЕБНЫЙ ЦЕНТР',
+				descr: 'Школа риэлторов. Система повышения квалификации, семинары, тренинги, участие в конференциях.'
+				}, {
+				img: 3,
+				title: 'ВЫСОКИЙ УРОВЕНЬ ВОЗНАГРАЖДЕНИЯ',
+				descr: 'Отсутствие ограничений. Уровень дохода на прямую зависит от Вашей активности.'
+				}]
+
+			each item in firstReasonList
+				+reasonCard(item)
+
+			+e.more
+				+e.BUTTON.more-btn.btn.js-more-reason(type='button')= reason.moreBtn
+
+			-
+				secondReasonList = [{
+				img: 4,
+				title: 'Профессионализм',
+				descr: 'Более 16 лет на рынке недвижимости'
+				}, {
+				img: 5,
+				title: 'Стабильность',
+				descr: 'Более 120 квалифицированных специалистов'
+				}, {
+				img: 6,
+				title: 'Короткие сроки реализации проекта',
+				descr: 'Лучшая цена для клиента'
+				}, {
+				img: 7,
+				title: 'Эксклюзивные выгодные предложения по ипотеке',
+				descr: 'для наших клиентов'
+				}, {
+				img: 8,
+				title: 'Собственная база недвижимости',
+				descr: 'Одна из самых крупных в Самарской области'
+				}, {
+				img: 9,
+				title: 'Максимально выгодное рекламное сопровождение',
+				descr: 'объектов клиента'
+				}]
+
+			each item in secondReasonList
+				+reasonCard(item)

@@ -1,0 +1,296 @@
+.contact-line
+	display: flex
+	color: #fff
+	&__item
+		&:not(:first-child)
+			margin-left: 70px
+	&__tel
+		a
+			+f('hel-700', 26)
+			+trs
+			.no-touch &:hover
+				color: #e9e9e9
+		span
+			font-size: 22px
+	&_header
+
+/* ===================================
+	 career
+	 =================================== */
+.career
+	padding: 65px 0 35px
+	background: url("../img/bg/career_bg.jpg") no-repeat 50% 50% / cover
+	&__text
+		max-width: 850px
+		margin: 0 auto 20px
+		text-align: center
+		color: #fff
+		p
+			font-size: 22px
+	&__title
+		margin-bottom: 15px
+	&__sub-title
+		font-size: 32px
+		text-transform: uppercase
+		color: #fff
+	&__want-btn
+		margin-top: 20px
+
+/* ===================================
+	 reason
+	 =================================== */
+.reason
+	padding: 65px 0 55px
+	&__inner
+		margin: 40px 0 0
+		font-size: 0
+		text-align: center
+	&__card
+		display: inline-block
+		vertical-align: top
+		width: 33.33333%
+		padding: 0 10px 65px
+		text-align: center
+		$parent: &
+		&:nth-child(n + 4)
+			display: none
+		&:nth-child(n + 4) #{$parent}-descr
+			margin-top: 0
+		&-img
+			position: relative
+			margin: 0 auto 25px
+			height: 196px
+			width: percentage(318 / 398)
+			overflow: hidden
+			+cover-img
+			&::after, &::before
+				position: absolute
+				content: ''
+				transition: transform .3s ease
+			&::before
+				bottom: 0
+				left: 0
+				+arr(135, 48, #f39200, bl)
+			&::after
+				top: 0
+				right: 0
+				+arr(48, 135, #1b69ac, tr)
+			&:hover::before
+				transform: translateX(-100%)
+			&:hover::after
+				transform: translateX(100%)
+		&-title
+			+f('hel-700', 18)
+			text-transform: uppercase
+		&-descr
+			max-width: 260px
+			margin: 20px auto 0
+			font-size: 14px
+	&__more-btn
+		padding: 19px 44px
+
+/* ===================================
+	 success
+	 =================================== */
+.success
+	position: relative
+	z-index: 1
+	padding: 55px 0
+	background-color: #1d71b8
+	&::after
+		+coverdiv
+		z-index: -1
+		opacity: .1
+		content: ''
+		background: url("../img/bg/success_bg.png") no-repeat 50% 50% / cover
+	&__container
+		text-align: center
+	&__slider
+		padding: 55px 67px
+		display: none
+		&.slick-initialized
+			display: block
+		.slick-list
+			margin: 0 -15px
+		.slider-btn
+			position: absolute
+			top: 50%
+			margin-top: -20px
+			z-index: 2
+			&_prev
+				left: 0
+			&_next
+				right: 0
+			.icon
+				fill: #fff
+				font-size: 47px
+				+trs
+			&.slick-disabled .icon
+				fill: rgba(#fff, .3)
+			.no-touch &:hover.slick-disabled .icon
+				fill: rgba(#fff, .3)
+			.no-touch &:hover .icon
+				fill: #f39200
+				
+	&__person
+		margin: 0 15px
+		padding: 15px
+		border-radius: 10px
+		background: #fff
+		font-size: 0
+		text-align: left
+		&-img
+			display: inline-block
+			vertical-align: middle
+			width: 226px
+			height: 222px
+			border-radius: 20px
+			overflow: hidden
+			+cover-img
+		&-text
+			display: inline-block
+			vertical-align: middle
+			width: calc(100% - 226px)
+			padding: 0 5px 0 20px
+		&-name
+			margin-bottom: 5px
+			font-size: 18px
+		p
+			font-size: 14px
+			color: #4e4e4e
+		
+	&__btn
+		padding: 19px 32px
+	
+
+/* ===================================
+	 rest
+	 =================================== */
+.rest
+	padding: 40px 0 50px
+	&__container
+		text-align: center
+	&__descr
+		margin: 45px 0 20px
+		font-size: 18px
+	&__photos
+		margin: 0 -6px 45px
+		&:last-child
+			margin-bottom: 0
+		$parent: &
+		&-img-big
+			display: inline-block
+			vertical-align: top
+			margin: 0 6px
+			width: calc(25% - 15px)
+			+ratio(304, 251)
+			img
+				+coverdiv
+			&:hover #{$parent}-icon
+				opacity: 1
+				transform: scale(1)
+			&_blue-bg
+				position: relative
+				&:hover::after
+					opacity: 1
+					transform: scale(1)
+				&::after
+					+coverdiv
+					opacity: 0
+					transform: scale(.4)
+					background: rgba(#1b69ac, .9)
+					content: ''
+					transition: .2s ease-in-out
+					z-index: 0
+					
+		&-icon
+			opacity: 0
+			transform: scale(.7)
+			position: absolute
+			top: 50%
+			left: 50%
+			z-index: 1
+			margin-top: -48px
+			margin-left: -48px
+			width: 96px
+			height: 96px
+			background: rgba(#f39200, .7)
+			border-radius: 50%
+			transition: transform .4s cubic-bezier(0.23, -0.43, 0.24, 1.9), opacity .5s ease
+			&::after
+				position: absolute
+				top: 8px
+				left: 8px
+				right: 8px
+				bottom: 8px
+				background-color: #fff
+				border-radius: 50%
+				content: ''
+			.icon
+				position: absolute
+				top: 50%
+				left: 50%
+				z-index: 2
+				fill: #f39200
+				+gpu
+				&-play
+					margin-top: -17px
+					margin-left: -14px
+					font-size: 34px
+				&-loupe
+					margin-top: -21px
+					margin-left: -20px
+					font-size: 43px
+		&-descr
+			margin: 10px 0 0
+			text-align: center
+	&__want-btn
+		padding: 19px 58px
+		
+.contact-map
+	position: relative
+	&__body
+		height: 667px
+	&__nav
+		position: absolute
+		top: 110px
+		left: 50%
+		margin-left: -630px
+		width: 380px
+		padding: 30px 30px 45px
+		border-radius: 10px
+		background-color: rgba(#ec6600, .8)
+		&-title
+			//padding-bottom: 25px
+			font-size: 22px
+			color: #fff
+			&::after
+				background: #fff
+		&-streets
+			margin-top: 20px
+			color: #fff
+			font-size: 18px
+			li
+				&:not(:first-child)
+					margin-top: 12px
+				.icon
+					display: inline-block
+					vertical-align: middle
+					font-size: 13px
+				span
+					display: inline-block
+					vertical-align: middle
+					border-bottom: 1px dashed transparent
+					transition: border-color .3s ease
+				&.is-active span
+					border-bottom: 1px dashed rgba(#fff, .7)
+					
+	&__data
+		padding: 15px
+	&__text
+		+f('hel-400', 16)
+		color: #323232
+		&:not(:first-child)
+			margin-top: 15px
+		address
+			font-style: normal

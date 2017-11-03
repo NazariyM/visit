@@ -1,0 +1,54 @@
+.c-tabs
+	$parent: &
+	&_career
+		max-width: 968px
+		+clr
+	&__tabs
+		&-nav
+			font-size: 0
+			#{$parent}_career &
+				float: left
+				width: 285px
+		&-el
+			padding: 0 15px
+			height: 71px
+			cursor: pointer
+			border-radius: 10px 0 0 10px
+			background-color: rgba(#f39200, .9)
+			+trs
+			+vertical
+			text-align: left
+			&:not(:first-child)
+				margin-top: 1px
+			span
+				display: inline-block
+				vertical-align: middle
+				+f('hel-700', 16)
+				color: $white
+			&.is-active
+				pointer-events: none
+				background-color: rgba(#c05100, .9)
+		&-for
+			height: 359px
+			float: left
+			width: calc(100% - 285px)
+			border-radius: 0 10px 10px 0
+			background-color: rgba(#fff, .9)
+	&__tab
+		display: flex
+		align-items: center
+		height: 100%
+		padding: 5px 23px 5px 27px
+		&:not(:first-child)
+			display: none
+		p
+			line-height: 18px
+			text-align: left
+			strong
+				+f('hel-700')
+			&:not(:first-child)
+				margin-top: 20px
+		&-in
+			text-align: center
+	&__more
+		margin-top: 20px

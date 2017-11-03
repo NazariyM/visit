@@ -1,0 +1,76 @@
+// basic styles
+body
+  min-width: 320px
+  +f('hel-400', 14)
+  line-height: 1.2
+  color: #2e2e2e
+
+.container
+  max-width: 1286px
+  margin: 0 auto
+  padding: 0 15px
+
+// titles
+.title-lg
+  +f('hel-700', 45)
+  line-height: 1.2
+  color: #fff
+  text-transform: uppercase
+  
+.title-md
+  position: relative
+  padding-bottom: 24px
+  color: #2e2e2e
+  +f('hel-700', 32)
+  text-transform: uppercase
+  text-align: center
+  &::after
+    position: absolute
+    left: 50%
+    bottom: 0
+    width: 112px
+    height: 2px
+    margin-left: -56px
+    background-color: #0e5fa5
+    content: ''
+  &_white
+    color: #fff
+    &::after
+      display: none
+      
+// buttons
+.btn
+  display: inline-block
+  vertical-align: top
+  padding: 19px 30px
+  border-radius: 10px
+  background-color: #f39200
+  color: $white
+  +f('hel-700', 20, 20)
+  text-transform: uppercase
+  +trs
+  &_sm
+    padding: 0 23px
+    height: 36px
+    background: $orange
+    text-transform: none
+    +f('web400', 16, 30)
+  .no-touch &:hover
+    background-color: #1b69ac
+  &_has-blue-bg
+    .no-touch &:hover
+      background: #ff7200
+    
+// help classes
+.underline
+  border-bottom: 1px solid #fff
+  transition: .25s ease
+  .no-touch &:hover
+    border-bottom-color: rgba(#fff, .7)
+    color: #e9e9e9
+  &_blue
+    color: #1b69ac
+    border-bottom-color: currentColor
+    .no-touch &:hover
+      color: #f39200
+      border-bottom-color: currentColor
