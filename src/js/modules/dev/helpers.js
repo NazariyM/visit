@@ -188,7 +188,8 @@ export const css = {
   active: 'is-active',
   hidden: 'is-hidden',
   visible: 'is-visible',
-  locked: 'is-locked'
+  locked: 'is-locked',
+  popupOpened: 'popup-opened'
 };
 
 /**
@@ -265,11 +266,26 @@ export const svgIcon = name => `
     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-${name}"></use>
   </svg>`;
 
-// export const svgIcon = (name) => {
-//   return `
-//   <svg class="icon icon-${name}">
-//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-${name}"></use>
-//     </svg>`;
-// };
-// const iconLeft = svgIcon('arrow-left');
-// const iconRight = svgIcon('arrow-right');
+/** @returns {Number} */
+export function getScrollbarWidth() {
+  const outer = document.createElement('div');
+  const inner = document.createElement('div');
+
+  outer.style.visibility = 'hidden';
+  outer.style.width = '100px';
+
+  inner.style.width = '100%';
+
+  outer.appendChild(inner);
+  document.body.appendChild(outer);
+
+  const widthWithoutScrollbar = outer.offsetWidth;
+
+  outer.style.overflow = 'scroll';
+
+  const widthWithScrollbar = inner.offsetWidth;
+
+  document.body.removeChild(outer);
+
+  return (widthWithoutScrollbar - widthWithScrollbar);
+}

@@ -1,15 +1,19 @@
 import { TweenMax } from 'gsap';
-import { css } from '../modules/dev/helpers';
+import { $window, $body, css } from '../modules/dev/helpers';
 
 export default class CTabs {
   constructor(el) {
     this.$tabNav = el.find('.c-tabs__tabs-nav').find('.c-tabs__tabs-el');
     this.$tabItemContainer = el.find('.c-tabs__tabs-for');
     this.$tabItem = this.$tabItemContainer.find('.c-tabs__tab');
+    this.$infoBlock = el.find('.c-tabs__more-info');
+    this.$closeBtn = el.find('.c-tabs__close');
   }
 
   init() {
     this.bindEvents();
+    this.openMoreInfo();
+    this.closeMoreInfo();
   }
 
   bindEvents() {
@@ -23,13 +27,14 @@ export default class CTabs {
       const targetIndex = $(ev.currentTarget).index();
 
       this.changeTab(currentIndex, targetIndex);
+      this.$infoBlock.slideUp();
     });
   }
 
   getActiveIndex() {
     let activeIndex = 0;
 
-    this.$tabNav.each(function() {
+    this.$tabNav.each(function () {
       if ($(this).hasClass(css.active)) {
         activeIndex = $(this).index();
       }
@@ -68,5 +73,40 @@ export default class CTabs {
         TweenMax.from(_this.$tabItemContainer, speed, { height: currentHeight });
       }
     });
+
+  }
+
+  openMoreInfo() {
+    const $moreLink = $('.js-career-more');
+
+    $moreLink.on('click', function (ev) {
+      ev.preventDefault();
+
+      const $that = $(this);
+      const $tabs = $('.c-tabs');
+      const $infoBlock = $that.next('.c-tabs__more-info');
+
+      $tabs.addClass(css.active);
+      $infoBlock.slideDown();
+    });
+  }
+
+  closeMoreInfo () {
+    const $tabs = $('.c-tabs');
+    const infoBlock = this.$infoBlock;
+    const $overlay = $tabs.find('.c-tabs__overlay');
+
+    this.$closeBtn.on('click', function (e) {
+      e.preventDefault();
+
+      $tabs.removeClass(css.active);
+      infoBlock.fadeOut();
+    });
+
+    $overlay.on('click', function () {
+      $tabs.removeClass(css.active);
+      infoBlock.fadeOut();
+    });
+
   }
 }

@@ -12,6 +12,8 @@ var _arguments = arguments;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+exports.getScrollbarWidth = getScrollbarWidth;
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
@@ -241,7 +243,8 @@ var css = exports.css = {
   active: 'is-active',
   hidden: 'is-hidden',
   visible: 'is-visible',
-  locked: 'is-locked'
+  locked: 'is-locked',
+  popupOpened: 'popup-opened'
 };
 
 /**
@@ -324,14 +327,29 @@ var svgIcon = exports.svgIcon = function svgIcon(name) {
   return '\n  <svg class="icon icon-' + name + '">\n    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-' + name + '"></use>\n  </svg>';
 };
 
-// export const svgIcon = (name) => {
-//   return `
-//   <svg class="icon icon-${name}">
-//       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-${name}"></use>
-//     </svg>`;
-// };
-// const iconLeft = svgIcon('arrow-left');
-// const iconRight = svgIcon('arrow-right');
+/** @returns {Number} */
+function getScrollbarWidth() {
+  var outer = document.createElement('div');
+  var inner = document.createElement('div');
+
+  outer.style.visibility = 'hidden';
+  outer.style.width = '100px';
+
+  inner.style.width = '100%';
+
+  outer.appendChild(inner);
+  document.body.appendChild(outer);
+
+  var widthWithoutScrollbar = outer.offsetWidth;
+
+  outer.style.overflow = 'scroll';
+
+  var widthWithScrollbar = inner.offsetWidth;
+
+  document.body.removeChild(outer);
+
+  return widthWithoutScrollbar - widthWithScrollbar;
+}
 
 /***/ }),
 /* 1 */,
@@ -8501,12 +8519,16 @@ var CTabs = function () {
     this.$tabNav = el.find('.c-tabs__tabs-nav').find('.c-tabs__tabs-el');
     this.$tabItemContainer = el.find('.c-tabs__tabs-for');
     this.$tabItem = this.$tabItemContainer.find('.c-tabs__tab');
+    this.$infoBlock = el.find('.c-tabs__more-info');
+    this.$closeBtn = el.find('.c-tabs__close');
   }
 
   _createClass(CTabs, [{
     key: 'init',
     value: function init() {
       this.bindEvents();
+      this.openMoreInfo();
+      this.closeMoreInfo();
     }
   }, {
     key: 'bindEvents',
@@ -8522,6 +8544,7 @@ var CTabs = function () {
         var targetIndex = $(ev.currentTarget).index();
 
         _this2.changeTab(currentIndex, targetIndex);
+        _this2.$infoBlock.slideUp();
       });
     }
   }, {
@@ -8568,6 +8591,41 @@ var CTabs = function () {
           }, speed / 2);
           _gsap.TweenMax.from(_this.$tabItemContainer, speed, { height: currentHeight });
         }
+      });
+    }
+  }, {
+    key: 'openMoreInfo',
+    value: function openMoreInfo() {
+      var $moreLink = $('.js-career-more');
+
+      $moreLink.on('click', function (ev) {
+        ev.preventDefault();
+
+        var $that = $(this);
+        var $tabs = $('.c-tabs');
+        var $infoBlock = $that.next('.c-tabs__more-info');
+
+        $tabs.addClass(_helpers.css.active);
+        $infoBlock.slideDown();
+      });
+    }
+  }, {
+    key: 'closeMoreInfo',
+    value: function closeMoreInfo() {
+      var $tabs = $('.c-tabs');
+      var infoBlock = this.$infoBlock;
+      var $overlay = $tabs.find('.c-tabs__overlay');
+
+      this.$closeBtn.on('click', function (e) {
+        e.preventDefault();
+
+        $tabs.removeClass(_helpers.css.active);
+        infoBlock.fadeOut();
+      });
+
+      $overlay.on('click', function () {
+        $tabs.removeClass(_helpers.css.active);
+        infoBlock.fadeOut();
       });
     }
   }]);

@@ -151,9 +151,15 @@
           <h4 class="career__sub-title">Для обычных людей с необычными мечтами.</h4>
           <p>Мы поможем Вам хорошо зарабатывать и профессионально развиваться.</p>
           <p>Начните свою карьеру с «Визит» и станьте на шаг ближе к своим мечтам!</p>
-          <a class="career__want-btn btn btn_has-blue-bg" href="#!">ХОЧУ РАБОТАТЬ</a>
+          <a class="career__want-btn btn btn_has-blue-bg" href="#!" data-popup-target="requestPopup">ХОЧУ РАБОТАТЬ</a>
         </div>
-        <div class="c-tabs c-tabs_career">
+        <div class="c-tabs">
+          <div class="c-tabs__overlay"></div>
+          <div class="c-tabs__close">
+            <svg class="icon icon-close">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+            </svg>
+          </div>
           <div class="c-tabs__tabs-nav">
             <div class="c-tabs__tabs-el is-active">
               <span>Специалист отдела
@@ -188,14 +194,32 @@
                   <strong>Специалиста отдела коммерческой недвижимости. </strong>
                 </p>
                 <div class="c-tabs__more">
-                  <a class="underline underline_blue" href="#!" data-popup-target="careerPopup-1">Подробнее о вакансии</a>
-                  <!-- begin career pop-up-->
-                  <div class="popup" data-popup-id="careerPopup-1" tabindex="-1" role="dialog">
-                    <div class="popup__container">
-                      <div class="popup__close js-popup-close">
-                        <svg class="icon icon-close">
-                          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
-                        </svg>
+                  <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
+                  <!-- begin more-info-->
+                  <div class="c-tabs__more-info">
+                    <div class="c-tabs__more-text">
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что нужно делать:</h6>
+                        <ul>
+                          <li>консультировать клиентов по вопросам продажи/покупки/аренде коммерческой недвижимости</li>
+                          <li>анализировать рынок недвижимости</li>
+                          <li>проводить переговоры</li>
+                          <li>проводить презентацию объектов</li>
+                          <li>организовывать сделки с недвижимостью в интересах Клиента</li>
+                          <li>делать предварительную оценку объектов недвижимости</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <ul>
+                          <li>грамотная речь</li>
+                          <li>умение вести переговоры на высоком уровне</li>
+                          <li>активная жизненная позиция, высокая работоспособность</li>
+                          <li>амбициозность, желание решать сложные задачи</li>
+                          <li>опыт работы в активных продажах, наличие автомобиля</li>
+                          <li>стремление развиваться и учиться</li>
+                          <li>владение компьютером на уровне опытного пользователя</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -216,7 +240,58 @@
                   <strong>Специалиста отдела коммерческой недвижимости. </strong>
                 </p>
                 <div class="c-tabs__more">
-                  <a class="underline underline_blue" href="#!" data-popup-target="careerPopup-1">Подробнее о вакансии</a>
+                  <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
+                  <div class="c-tabs__more-info">
+                    <div class="c-tabs__more-text">
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что нужно делать:</h6>
+                        <ul>
+                          <li>консультировать клиентов по вопросам продажи/покупки/аренде коммерческой недвижимости</li>
+                          <li>анализировать рынок недвижимости</li>
+                          <li>проводить переговоры</li>
+                          <li>проводить презентацию объектов</li>
+                          <li>организовывать сделки с недвижимостью в интересах Клиента</li>
+                          <li>делать предварительную оценку объектов недвижимости</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <ul>
+                          <li>грамотная речь</li>
+                          <li>умение вести переговоры на высоком уровне</li>
+                          <li>активная жизненная позиция, высокая работоспособность</li>
+                          <li>амбициозность, желание решать сложные задачи</li>
+                          <li>опыт работы в активных продажах, наличие автомобиля</li>
+                          <li>стремление развиваться и учиться</li>
+                          <li>владение компьютером на уровне опытного пользователя</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <ul>
+                          <li>грамотная речь</li>
+                          <li>умение вести переговоры на высоком уровне</li>
+                          <li>активная жизненная позиция, высокая работоспособность</li>
+                          <li>амбициозность, желание решать сложные задачи</li>
+                          <li>опыт работы в активных продажах, наличие автомобиля</li>
+                          <li>стремление развиваться и учиться</li>
+                          <li>владение компьютером на уровне опытного пользователя</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <ul>
+                          <li>грамотная речь</li>
+                          <li>умение вести переговоры на высоком уровне</li>
+                          <li>активная жизненная позиция, высокая работоспособность</li>
+                          <li>амбициозность, желание решать сложные задачи</li>
+                          <li>опыт работы в активных продажах, наличие автомобиля</li>
+                          <li>стремление развиваться и учиться</li>
+                          <li>владение компьютером на уровне опытного пользователя</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -234,7 +309,7 @@
                   <strong>Специалиста отдела коммерческой недвижимости. </strong>
                 </p>
                 <div class="c-tabs__more">
-                  <a class="underline underline_blue" href="#!" data-popup-target="careerPopup-1">Подробнее о вакансии</a>
+                  <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
                 </div>
               </div>
             </div>
@@ -252,7 +327,7 @@
                   <strong>Специалиста отдела коммерческой недвижимости. </strong>
                 </p>
                 <div class="c-tabs__more">
-                  <a class="underline underline_blue" href="#!" data-popup-target="careerPopup-1">Подробнее о вакансии</a>
+                  <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
                 </div>
               </div>
             </div>
@@ -270,7 +345,7 @@
                   <strong>Специалиста отдела коммерческой недвижимости. </strong>
                 </p>
                 <div class="c-tabs__more">
-                  <a class="underline underline_blue" href="#!" data-popup-target="careerPopup-1">Подробнее о вакансии</a>
+                  <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
                 </div>
               </div>
             </div>

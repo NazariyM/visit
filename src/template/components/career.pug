@@ -13,9 +13,12 @@ if career.wantBtn ? career.wantBtn : career.wantBtn = 'ХОЧУ РАБОТАТЬ
 			+e.H4.sub-title= career.subTitle
 			+e.P= career.descrFirst
 			+e.P= career.descrSecond
-			+e.A.want-btn.btn._has-blue-bg(href='#!')= career.wantBtn
+			+e.A.want-btn.btn._has-blue-bg(href='#!' data-popup-target='requestPopup')= career.wantBtn
 
-		+b.c-tabs._career
+		+b.c-tabs
+			+e.overlay
+			+e.close
+				+i('close')
 			+e.tabs-nav
 				+e.tabs-el.is-active
 					+e.SPAN Специалист отдела
@@ -52,12 +55,29 @@ if career.wantBtn ? career.wantBtn : career.wantBtn = 'ХОЧУ РАБОТАТЬ
 							+e.STRONG Специалиста отдела коммерческой недвижимости. 
 
 						+e.more
-							+b.A.underline._blue(href='#!' data-popup-target='careerPopup-1') Подробнее о вакансии
-							// begin career pop-up
-							+b.popup(data-popup-id='careerPopup-1', tabindex='-1', role='dialog')
-								+e.container
-									+e.close.js-popup-close
-										+i('close')
+							+b.A.js-career-more.underline._blue(href='#!') Подробнее о вакансии
+							// begin more-info
+							+e.more-info
+								+e.more-text
+									+e.more-list
+										+e.H6.more-list-title Что нужно делать:
+										ul
+											li консультировать клиентов по вопросам продажи/покупки/аренде коммерческой недвижимости
+											li анализировать рынок недвижимости
+											li проводить переговоры
+											li проводить презентацию объектов
+											li организовывать сделки с недвижимостью в интересах Клиента
+											li делать предварительную оценку объектов недвижимости
+									+e.more-list
+										+e.H6.more-list-title Что мы хотим видеть в будущем сотруднике:
+										ul
+											li грамотная речь
+											li умение вести переговоры на высоком уровне
+											li активная жизненная позиция, высокая работоспособность
+											li амбициозность, желание решать сложные задачи
+											li опыт работы в активных продажах, наличие автомобиля
+											li стремление развиваться и учиться
+											li владение компьютером на уровне опытного пользователя
 
 				+e.tab
 					+e.tab-in
@@ -79,7 +99,48 @@ if career.wantBtn ? career.wantBtn : career.wantBtn = 'ХОЧУ РАБОТАТЬ
 							+e.STRONG Специалиста отдела коммерческой недвижимости. 
 
 						+e.more
-							+b.A.underline._blue(href='#!' data-popup-target='careerPopup-1') Подробнее о вакансии
+							+b.A.js-career-more.underline._blue(href='#!') Подробнее о вакансии
+							+e.more-info
+								+e.more-text
+									+e.more-list
+										+e.H6.more-list-title Что нужно делать:
+										ul
+											li консультировать клиентов по вопросам продажи/покупки/аренде коммерческой недвижимости
+											li анализировать рынок недвижимости
+											li проводить переговоры
+											li проводить презентацию объектов
+											li организовывать сделки с недвижимостью в интересах Клиента
+											li делать предварительную оценку объектов недвижимости
+									+e.more-list
+										+e.H6.more-list-title Что мы хотим видеть в будущем сотруднике:
+										ul
+											li грамотная речь
+											li умение вести переговоры на высоком уровне
+											li активная жизненная позиция, высокая работоспособность
+											li амбициозность, желание решать сложные задачи
+											li опыт работы в активных продажах, наличие автомобиля
+											li стремление развиваться и учиться
+											li владение компьютером на уровне опытного пользователя
+									+e.more-list
+										+e.H6.more-list-title Что мы хотим видеть в будущем сотруднике:
+										ul
+											li грамотная речь
+											li умение вести переговоры на высоком уровне
+											li активная жизненная позиция, высокая работоспособность
+											li амбициозность, желание решать сложные задачи
+											li опыт работы в активных продажах, наличие автомобиля
+											li стремление развиваться и учиться
+											li владение компьютером на уровне опытного пользователя
+									+e.more-list
+										+e.H6.more-list-title Что мы хотим видеть в будущем сотруднике:
+										ul
+											li грамотная речь
+											li умение вести переговоры на высоком уровне
+											li активная жизненная позиция, высокая работоспособность
+											li амбициозность, желание решать сложные задачи
+											li опыт работы в активных продажах, наличие автомобиля
+											li стремление развиваться и учиться
+											li владение компьютером на уровне опытного пользователя
 
 				+e.tab
 					+e.tab-in
@@ -101,7 +162,7 @@ if career.wantBtn ? career.wantBtn : career.wantBtn = 'ХОЧУ РАБОТАТЬ
 							+e.STRONG Специалиста отдела коммерческой недвижимости. 
 
 						+e.more
-							+b.A.underline._blue(href='#!' data-popup-target='careerPopup-1') Подробнее о вакансии
+							+b.A.js-career-more.underline._blue(href='#!') Подробнее о вакансии
 
 				+e.tab
 					+e.tab-in
@@ -123,7 +184,7 @@ if career.wantBtn ? career.wantBtn : career.wantBtn = 'ХОЧУ РАБОТАТЬ
 							+e.STRONG Специалиста отдела коммерческой недвижимости. 
 
 						+e.more
-							+b.A.underline._blue(href='#!' data-popup-target='careerPopup-1') Подробнее о вакансии
+							+b.A.js-career-more.underline._blue(href='#!') Подробнее о вакансии
 
 				+e.tab
 					+e.tab-in
@@ -145,4 +206,4 @@ if career.wantBtn ? career.wantBtn : career.wantBtn = 'ХОЧУ РАБОТАТЬ
 							+e.STRONG Специалиста отдела коммерческой недвижимости. 
 
 						+e.more
-							+b.A.underline._blue(href='#!' data-popup-target='careerPopup-1') Подробнее о вакансии
+							+b.A.js-career-more.underline._blue(href='#!') Подробнее о вакансии
