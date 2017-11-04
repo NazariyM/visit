@@ -14,7 +14,7 @@ if reason.moreBtn ? reason.moreBtn : reason.moreBtn = 'ПОСМОТРЕТЬ ЕЩ
 					+e.card-img
 						+e.IMG(src=`static/img/content/reason-${item.img}.jpg` alt='image')
 					+e.card-text
-						+e.H4.card-title= item.title
+						+e.H4.card-title(class= item.titleMod ? item.titleMod : '')= item.title
 						+e.P.card-descr= item.descr
 
 			-
@@ -49,6 +49,7 @@ if reason.moreBtn ? reason.moreBtn : reason.moreBtn = 'ПОСМОТРЕТЬ ЕЩ
 				descr: 'Более 120 квалифицированных специалистов'
 				}, {
 				img: 6,
+				titleMod: '_short',
 				title: 'Короткие сроки реализации проекта',
 				descr: 'Лучшая цена для клиента'
 				}, {
@@ -57,10 +58,12 @@ if reason.moreBtn ? reason.moreBtn : reason.moreBtn = 'ПОСМОТРЕТЬ ЕЩ
 				descr: 'для наших клиентов'
 				}, {
 				img: 8,
+				titleMod: '_short',
 				title: 'Собственная база недвижимости',
 				descr: 'Одна из самых крупных в Самарской области'
 				}, {
 				img: 9,
+				titleMod: '_short',
 				title: 'Максимально выгодное рекламное сопровождение',
 				descr: 'объектов клиента'
 				}]

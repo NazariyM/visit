@@ -8375,6 +8375,8 @@ var _fancybox = __webpack_require__(13);
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
 
+var _mobNav = __webpack_require__(23);
+
 var _showReasons = __webpack_require__(14);
 
 var _initSliders = __webpack_require__(15);
@@ -8392,42 +8394,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
  */
 
 var Common = exports.Common = function () {
-  /**
-   * Cache data etc.
-   */
   function Common() {
     _classCallCheck(this, Common);
-
-    this.messages = {
-      constructor: 'COMMON: constructing...',
-      init: 'COMMON: initializing...',
-      test: 'COMMON: Test message!'
-    };
-
-    console.log(this.messages.constructor);
   }
 
-  /**
-   * Test method.
-   */
-
-
-  _createClass(Common, [{
-    key: 'test',
-    value: function test() {
-      console.log(this.messages.test);
-    }
-  }, {
+  _createClass(Common, null, [{
     key: 'init',
-
 
     /**
      * Initialize Main page scripts.
      */
     value: function init() {
-      console.log(this.messages.init);
-
-      this.test();
       _initDot2.default.init();
       (0, _objectFitImages2.default)();
       (0, _showReasons.showReasons)();
@@ -8452,7 +8429,7 @@ $tabs.each(function (index, el) {
 $('[data-fancybox]').fancybox();
 
 /** Export initialized common scripts by default */
-exports.default = new Common().init();
+exports.default = Common.init();
 
 /***/ }),
 /* 6 */
@@ -14657,29 +14634,16 @@ function initSliders() {
   var $successSld = $('.js-success-slider');
   $successSld.slick($.extend({}, defaultOptions, {
     responsive: [{
-      breakpoint: 1023,
+      breakpoint: 1279,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true
       }
     }]
   }));
-
-  // const $mobileSlider = $('.js-mobile-slider');
-  // $mobileSlider.slick($.extend({}, defaultOptions, {
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   dots: true,
-  //   arrows: false,
-  //   adaptiveHeight: true,
-  //   mobileFirst: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: 'unslick'
-  //     }
-  //   ]
-  // }));
 }
 
 /***/ }),
@@ -17964,6 +17928,67 @@ var Timer = exports.Timer = function Timer() {
 ;
 
 exports.default = new Timer();
+
+/***/ }),
+/* 22 */,
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MobNav = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _helpers = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobNav = exports.MobNav = function () {
+  function MobNav() {
+    _classCallCheck(this, MobNav);
+
+    this.$btn = $('.js-hamburger');
+    this.$nav = $('.js-nav');
+    this.init();
+  }
+
+  _createClass(MobNav, [{
+    key: 'toggleNav',
+    value: function toggleNav() {
+      this.$btn.on('click', function () {
+        $(this).toggleClass(_helpers.css.active);
+        $(this).closest('.header__contact').next(this.$nav).toggleClass(_helpers.css.active);
+        _helpers.$body.toggleClass(_helpers.css.locked);
+      });
+    }
+  }, {
+    key: 'onResize',
+    value: function onResize() {
+      var _this = this;
+
+      _helpers.$window.on('resize', function () {
+        _this.$nav.removeClass(_helpers.css.active);
+        _this.$btn.removeClass(_helpers.css.active);
+        _helpers.$body.removeClass(_helpers.css.locked);
+      });
+    }
+  }, {
+    key: 'init',
+    value: function init() {
+      this.toggleNav();
+      this.onResize();
+    }
+  }]);
+
+  return MobNav;
+}();
+
+exports.default = new MobNav();
 
 /***/ })
 ],[4]);

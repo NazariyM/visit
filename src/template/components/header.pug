@@ -29,7 +29,11 @@
 						+e.SPAN +7 (846)&nbsp;
 						| 226-50-58
 
-	+b.NAV.nav
+			button.hamburger.header__hamburger.hamburger--spring.js-hamburger(type='button')
+				span.hamburger-box
+					span.hamburger-inner
+
+	+b.NAV.nav.js-nav
 		+e.UL.list.container
 			-
 				navList = [
@@ -43,3 +47,14 @@
 			for navLink, index in navList
 				-activeIndex = 1
 				li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink
+
+		+b.contact-line._mobile
+			+e.item.contact-line__mail
+				a(href='mailto:mail.com')
+					+i('email')
+					+e.SPAN Написать нам
+			+e.item.contact-line__tel
+				+e.A(href='tel:+78462265058')
+					+i('phone')
+					+e.SPAN +7 (846)&nbsp;
+					| 226-50-58

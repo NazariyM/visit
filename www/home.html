@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <!--	- var contactMap = false;-->
   <head>
     <meta name="format-detection" content="telephone=no">
     <meta charset="utf-8">
@@ -117,9 +116,14 @@
                 <span>+7 (846)&nbsp;</span>226-50-58</a>
             </div>
           </div>
+          <button class="hamburger header__hamburger hamburger--spring js-hamburger" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
       </div>
-      <nav class="nav">
+      <nav class="nav js-nav">
         <ul class="nav__list container">
           <li class="is-active">
             <a href="#!">Алгоритм работы</a>
@@ -140,6 +144,23 @@
             <a href="#!">Контакты</a>
           </li>
         </ul>
+        <div class="contact-line contact-line_mobile">
+          <div class="contact-line__item contact-line__mail">
+            <a href="mailto:mail.com">
+              <svg class="icon icon-email">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use>
+              </svg>
+              <span>Написать нам</span>
+            </a>
+          </div>
+          <div class="contact-line__item contact-line__tel">
+            <a href="tel:+78462265058">
+              <svg class="icon icon-phone">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
+              </svg>
+              <span>+7 (846)&nbsp;</span>226-50-58</a>
+          </div>
+        </div>
       </nav>
     </header>
     <main class="content"></main>
@@ -221,6 +242,26 @@
                           <li>владение компьютером на уровне опытного пользователя</li>
                         </ul>
                       </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы предлагаем:</h6>
+                        <ul>
+                          <li>предоставляем базу объектов</li>
+                          <li>обучение бесплатно</li>
+                          <li>работа в надежной, стабильной компании с дружным коллективом и устойчивой положительной репутацией на рынке недвижимости</li>
+                          <li>оформление согласно ТК</li>
+                          <li>постоянное повышение квалификации</li>
+                          <li>юридическая поддержка</li>
+                          <li>ДМС.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c-tabs__more-actions">
+                      <div class="c-tabs__more-salary">
+                        <p>Уровень дохода:
+                          <span>от 20 000 до 120 000 руб.</span>
+                        </p>
+                      </div>
+                      <button class="c-tabs__more-request btn btn_transparent" type="button" data-popup-target="requestPopup">Оставить заявку</button>
                     </div>
                   </div>
                 </div>
@@ -241,6 +282,7 @@
                 </p>
                 <div class="c-tabs__more">
                   <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
+                  <!-- begin more-info-->
                   <div class="c-tabs__more-info">
                     <div class="c-tabs__more-text">
                       <div class="c-tabs__more-list">
@@ -267,29 +309,25 @@
                         </ul>
                       </div>
                       <div class="c-tabs__more-list">
-                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <h6 class="c-tabs__more-list-title">Что мы предлагаем:</h6>
                         <ul>
-                          <li>грамотная речь</li>
-                          <li>умение вести переговоры на высоком уровне</li>
-                          <li>активная жизненная позиция, высокая работоспособность</li>
-                          <li>амбициозность, желание решать сложные задачи</li>
-                          <li>опыт работы в активных продажах, наличие автомобиля</li>
-                          <li>стремление развиваться и учиться</li>
-                          <li>владение компьютером на уровне опытного пользователя</li>
+                          <li>предоставляем базу объектов</li>
+                          <li>обучение бесплатно</li>
+                          <li>работа в надежной, стабильной компании с дружным коллективом и устойчивой положительной репутацией на рынке недвижимости</li>
+                          <li>оформление согласно ТК</li>
+                          <li>постоянное повышение квалификации</li>
+                          <li>юридическая поддержка</li>
+                          <li>ДМС.</li>
                         </ul>
                       </div>
-                      <div class="c-tabs__more-list">
-                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
-                        <ul>
-                          <li>грамотная речь</li>
-                          <li>умение вести переговоры на высоком уровне</li>
-                          <li>активная жизненная позиция, высокая работоспособность</li>
-                          <li>амбициозность, желание решать сложные задачи</li>
-                          <li>опыт работы в активных продажах, наличие автомобиля</li>
-                          <li>стремление развиваться и учиться</li>
-                          <li>владение компьютером на уровне опытного пользователя</li>
-                        </ul>
+                    </div>
+                    <div class="c-tabs__more-actions">
+                      <div class="c-tabs__more-salary">
+                        <p>Уровень дохода:
+                          <span>от 20 000 до 120 000 руб.</span>
+                        </p>
                       </div>
+                      <button class="c-tabs__more-request btn btn_transparent" type="button" data-popup-target="requestPopup">Оставить заявку</button>
                     </div>
                   </div>
                 </div>
@@ -310,6 +348,54 @@
                 </p>
                 <div class="c-tabs__more">
                   <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
+                  <!-- begin more-info-->
+                  <div class="c-tabs__more-info">
+                    <div class="c-tabs__more-text">
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что нужно делать:</h6>
+                        <ul>
+                          <li>консультировать клиентов по вопросам продажи/покупки/аренде коммерческой недвижимости</li>
+                          <li>анализировать рынок недвижимости</li>
+                          <li>проводить переговоры</li>
+                          <li>проводить презентацию объектов</li>
+                          <li>организовывать сделки с недвижимостью в интересах Клиента</li>
+                          <li>делать предварительную оценку объектов недвижимости</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <ul>
+                          <li>грамотная речь</li>
+                          <li>умение вести переговоры на высоком уровне</li>
+                          <li>активная жизненная позиция, высокая работоспособность</li>
+                          <li>амбициозность, желание решать сложные задачи</li>
+                          <li>опыт работы в активных продажах, наличие автомобиля</li>
+                          <li>стремление развиваться и учиться</li>
+                          <li>владение компьютером на уровне опытного пользователя</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы предлагаем:</h6>
+                        <ul>
+                          <li>предоставляем базу объектов</li>
+                          <li>обучение бесплатно</li>
+                          <li>работа в надежной, стабильной компании с дружным коллективом и устойчивой положительной репутацией на рынке недвижимости</li>
+                          <li>оформление согласно ТК</li>
+                          <li>постоянное повышение квалификации</li>
+                          <li>юридическая поддержка</li>
+                          <li>ДМС.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c-tabs__more-actions">
+                      <div class="c-tabs__more-salary">
+                        <p>Уровень дохода:
+                          <span>от 20 000 до 120 000 руб.</span>
+                        </p>
+                      </div>
+                      <button class="c-tabs__more-request btn btn_transparent" type="button" data-popup-target="requestPopup">Оставить заявку</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -328,6 +414,54 @@
                 </p>
                 <div class="c-tabs__more">
                   <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
+                  <!-- begin more-info-->
+                  <div class="c-tabs__more-info">
+                    <div class="c-tabs__more-text">
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что нужно делать:</h6>
+                        <ul>
+                          <li>консультировать клиентов по вопросам продажи/покупки/аренде коммерческой недвижимости</li>
+                          <li>анализировать рынок недвижимости</li>
+                          <li>проводить переговоры</li>
+                          <li>проводить презентацию объектов</li>
+                          <li>организовывать сделки с недвижимостью в интересах Клиента</li>
+                          <li>делать предварительную оценку объектов недвижимости</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <ul>
+                          <li>грамотная речь</li>
+                          <li>умение вести переговоры на высоком уровне</li>
+                          <li>активная жизненная позиция, высокая работоспособность</li>
+                          <li>амбициозность, желание решать сложные задачи</li>
+                          <li>опыт работы в активных продажах, наличие автомобиля</li>
+                          <li>стремление развиваться и учиться</li>
+                          <li>владение компьютером на уровне опытного пользователя</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы предлагаем:</h6>
+                        <ul>
+                          <li>предоставляем базу объектов</li>
+                          <li>обучение бесплатно</li>
+                          <li>работа в надежной, стабильной компании с дружным коллективом и устойчивой положительной репутацией на рынке недвижимости</li>
+                          <li>оформление согласно ТК</li>
+                          <li>постоянное повышение квалификации</li>
+                          <li>юридическая поддержка</li>
+                          <li>ДМС.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c-tabs__more-actions">
+                      <div class="c-tabs__more-salary">
+                        <p>Уровень дохода:
+                          <span>от 20 000 до 120 000 руб.</span>
+                        </p>
+                      </div>
+                      <button class="c-tabs__more-request btn btn_transparent" type="button" data-popup-target="requestPopup">Оставить заявку</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -346,6 +480,54 @@
                 </p>
                 <div class="c-tabs__more">
                   <a class="js-career-more underline underline_blue" href="#!">Подробнее о вакансии</a>
+                  <!-- begin more-info-->
+                  <div class="c-tabs__more-info">
+                    <div class="c-tabs__more-text">
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что нужно делать:</h6>
+                        <ul>
+                          <li>консультировать клиентов по вопросам продажи/покупки/аренде коммерческой недвижимости</li>
+                          <li>анализировать рынок недвижимости</li>
+                          <li>проводить переговоры</li>
+                          <li>проводить презентацию объектов</li>
+                          <li>организовывать сделки с недвижимостью в интересах Клиента</li>
+                          <li>делать предварительную оценку объектов недвижимости</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы хотим видеть в будущем сотруднике:</h6>
+                        <ul>
+                          <li>грамотная речь</li>
+                          <li>умение вести переговоры на высоком уровне</li>
+                          <li>активная жизненная позиция, высокая работоспособность</li>
+                          <li>амбициозность, желание решать сложные задачи</li>
+                          <li>опыт работы в активных продажах, наличие автомобиля</li>
+                          <li>стремление развиваться и учиться</li>
+                          <li>владение компьютером на уровне опытного пользователя</li>
+                        </ul>
+                      </div>
+                      <div class="c-tabs__more-list">
+                        <h6 class="c-tabs__more-list-title">Что мы предлагаем:</h6>
+                        <ul>
+                          <li>предоставляем базу объектов</li>
+                          <li>обучение бесплатно</li>
+                          <li>работа в надежной, стабильной компании с дружным коллективом и устойчивой положительной репутацией на рынке недвижимости</li>
+                          <li>оформление согласно ТК</li>
+                          <li>постоянное повышение квалификации</li>
+                          <li>юридическая поддержка</li>
+                          <li>ДМС.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c-tabs__more-actions">
+                      <div class="c-tabs__more-salary">
+                        <p>Уровень дохода:
+                          <span>от 20 000 до 120 000 руб.</span>
+                        </p>
+                      </div>
+                      <button class="c-tabs__more-request btn btn_transparent" type="button" data-popup-target="requestPopup">Оставить заявку</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -411,7 +593,7 @@
               <img src="static/img/content/reason-6.jpg" alt="image" title="" />
             </div>
             <div class="reason__card-text">
-              <h4 class="reason__card-title">Короткие сроки реализации проекта</h4>
+              <h4 class="reason__card-title reason__card-title_short">Короткие сроки реализации проекта</h4>
               <p class="reason__card-descr">Лучшая цена для клиента</p>
             </div>
           </div>
@@ -429,7 +611,7 @@
               <img src="static/img/content/reason-8.jpg" alt="image" title="" />
             </div>
             <div class="reason__card-text">
-              <h4 class="reason__card-title">Собственная база недвижимости</h4>
+              <h4 class="reason__card-title reason__card-title_short">Собственная база недвижимости</h4>
               <p class="reason__card-descr">Одна из самых крупных в Самарской области</p>
             </div>
           </div>
@@ -438,7 +620,7 @@
               <img src="static/img/content/reason-9.jpg" alt="image" title="" />
             </div>
             <div class="reason__card-text">
-              <h4 class="reason__card-title">Максимально выгодное рекламное сопровождение</h4>
+              <h4 class="reason__card-title reason__card-title_short">Максимально выгодное рекламное сопровождение</h4>
               <p class="reason__card-descr">объектов клиента</p>
             </div>
           </div>
@@ -448,7 +630,7 @@
     <!--begin success-->
     <section class="success">
       <div class="success__container container">
-        <h2 class="title-md title-md_white">ИСТОРИИ УСПЕХА КОГДА СБЫВАЮТСЯ МЕЧТЫ</h2>
+        <h2 class="success__title title-md title-md_white">ИСТОРИИ УСПЕХА КОГДА СБЫВАЮТСЯ МЕЧТЫ</h2>
         <div class="success__slider js-success-slider owl-carousel">
           <div class="success__person">
             <div class="success__person-img">
@@ -456,9 +638,10 @@
             </div>
             <div class="success__person-text">
               <div class="success__person-name">Юлия Хмелевская</div>
-              <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
-              <button
-                class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
+              <div class="success__person-feed js-dot">
+                <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
+              </div>
+              <button class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
             </div>
           </div>
           <div class="success__person">
@@ -467,9 +650,10 @@
             </div>
             <div class="success__person-text">
               <h5 class="success__person-name">Иван Николаев</h5>
-              <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
-              <button
-                class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
+              <div class="success__person-feed js-dot">
+                <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
+              </div>
+              <button class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
             </div>
           </div>
           <div class="success__person">
@@ -478,9 +662,10 @@
             </div>
             <div class="success__person-text">
               <div class="success__person-name">Юлия Хмелевская</div>
-              <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
-              <button
-                class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
+              <div class="success__person-feed js-dot">
+                <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
+              </div>
+              <button class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
             </div>
           </div>
           <div class="success__person">
@@ -489,9 +674,10 @@
             </div>
             <div class="success__person-text">
               <h5 class="success__person-name">Иван Николаев</h5>
-              <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
-              <button
-                class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
+              <div class="success__person-feed js-dot">
+                <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
+              </div>
+              <button class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
             </div>
           </div>
           <div class="success__person">
@@ -500,9 +686,10 @@
             </div>
             <div class="success__person-text">
               <div class="success__person-name">Юлия Хмелевская</div>
-              <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
-              <button
-                class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
+              <div class="success__person-feed js-dot">
+                <p>Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.</p>
+              </div>
+              <button class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
             </div>
           </div>
           <div class="success__person">
@@ -511,9 +698,10 @@
             </div>
             <div class="success__person-text">
               <h5 class="success__person-name">Иван Николаев</h5>
-              <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
-              <button
-                class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
+              <div class="success__person-feed js-dot">
+                <p>Я работаю в АН «Визит» с марта 2016 года, но в сфере недвижимости работаю очень давно. Еще во время обучения в институте я проходил производственную практику в Регистрационной палате, потом меня позвали туда на преддипломную практику...</p>
+              </div>
+              <button class="success__person-story underline underline_blue" type="button" data-popup-target="storyPopup">Читать полностью</button>
             </div>
           </div>
         </div>
@@ -551,13 +739,13 @@
     <!--begin rest-->
     <section class="rest">
       <div class="rest__container container">
-        <h2 class="title-md">ХОРОШО РАБОТАЕМ – ОТЛИЧНО ОТДЫХАЕМ</h2>
+        <h2 class="rest__title title-md">ХОРОШО РАБОТАЕМ – ОТЛИЧНО ОТДЫХАЕМ</h2>
         <div class="rest__descr">
           <p>Мы не боимся трудностей, с радостью и энтузиазмом ставим себе амбициозные цели и гордимся своими успехами.</p>
           <p>Вне рабочих задач мы тоже много общаемся и собираемся вместе, чтобы провести выходные, отметить праздники или научиться чему-то новому. </p>
         </div>
         <div class="rest__photos">
-          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+          <a class="rest__photos-img-big" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="data-fancybox">
             <img src="static/img/content/rest-1.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-play">
@@ -565,7 +753,7 @@
               </svg>
             </div>
           </a>
-          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+          <a class="rest__photos-img-big" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="data-fancybox">
             <img src="static/img/content/rest-2.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-play">
@@ -573,7 +761,7 @@
               </svg>
             </div>
           </a>
-          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+          <a class="rest__photos-img-big" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="data-fancybox">
             <img src="static/img/content/rest-3.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-play">
@@ -581,7 +769,7 @@
               </svg>
             </div>
           </a>
-          <a class="rest__photos-img-big" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-1">
+          <a class="rest__photos-img-big" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox="data-fancybox">
             <img src="static/img/content/rest-4.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-play">
@@ -595,7 +783,7 @@
           </div>
         </div>
         <div class="rest__photos">
-          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos">
             <img src="static/img/content/rest-5.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-loupe">
@@ -603,7 +791,7 @@
               </svg>
             </div>
           </a>
-          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos">
             <img src="static/img/content/rest-6.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-loupe">
@@ -611,7 +799,7 @@
               </svg>
             </div>
           </a>
-          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos">
             <img src="static/img/content/rest-7.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-loupe">
@@ -619,7 +807,7 @@
               </svg>
             </div>
           </a>
-          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos-2">
+          <a class="rest__photos-img-big rest__photos-img-big_blue-bg" href="static/img/content/rest-big-img.jpg" data-fancybox="rest-photos">
             <img src="static/img/content/rest-8.jpg" alt="image" title="" />
             <div class="rest__photos-icon">
               <svg class="icon icon-loupe">
@@ -636,7 +824,6 @@
     </section>
     <!--begin contact-map-->
     <section class="contact-map">
-      <div class="contact-map__body" id="contact-map"></div>
       <div class="contact-map__nav">
         <h4 class="contact-map__nav-title title-md">НАШИ ОФИСЫ В САМАРЕ</h4>
         <ul class="contact-map__nav-streets js-contact-streets">
@@ -682,6 +869,7 @@
           </li>
         </ul>
       </div>
+      <div class="contact-map__body" id="contact-map"></div>
     </section>
     <!-- begin request pop-up-->
     <div class="popup popup_request" data-popup-id="requestPopup" tabindex="-1" role="dialog">
@@ -769,7 +957,7 @@
               </svg>
               <span>+7 (846)</span> 226-50-58</a>
           </div>
-          <div class="contact-line__item">
+          <div class="contact-line__item contact-line__dev">
             <a class="underline" href="#!">Сделано руками Актиком</a>
           </div>
         </div>

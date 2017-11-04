@@ -4,6 +4,7 @@ import Dot from './initDot';
 import './popupInit';
 import objectFitImages from 'object-fit-images';
 import fancyBox from '@fancyapps/fancybox';
+import { MobNav } from './mobNav';
 import { showReasons } from './showReasons';
 import { initSliders } from './initSliders';
 import { initContactMap } from './initContactMap';
@@ -16,32 +17,9 @@ import { initContactMap } from './initContactMap';
 
 export class Common {
   /**
-   * Cache data etc.
-   */
-  constructor() {
-    this.messages = {
-      constructor: 'COMMON: constructing...',
-      init: 'COMMON: initializing...',
-      test: 'COMMON: Test message!'
-    };
-
-    console.log(this.messages.constructor);
-  }
-
-  /**
-   * Test method.
-   */
-  test() {
-    console.log(this.messages.test);
-  };
-
-  /**
    * Initialize Main page scripts.
    */
-  init() {
-    console.log(this.messages.init);
-
-    this.test();
+  static init() {
     Dot.init();
     objectFitImages();
     showReasons();
@@ -61,4 +39,4 @@ $tabs.each((index, el) => {
 $('[data-fancybox]').fancybox();
 
 /** Export initialized common scripts by default */
-export default new Common().init();
+export default Common.init();

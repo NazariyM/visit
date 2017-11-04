@@ -1,10 +1,11 @@
 .contact-line
 	display: flex
-	align-items: center
+	align-items: flex-end
 	color: #fff
+	+xs
+		flex-direction: column
+	$parent: &
 	&__item
-		&:not(:first-child)
-			margin-left: 70px
 		a
 			display: flex
 			align-items: center
@@ -20,27 +21,90 @@
 			line-height: 1
 			border-bottom: 1px solid #fff
 			+trs
+			+sm
+				font-size: 14px
 		.icon
 			fill: #fff
 			+trs
 		.icon-email
 			margin-right: 10px
 			font-size: 22px
+			+sm
+				margin-right: 6px
+				font-size: 19px
 		.icon-phone
 			margin-right: 12px
 			font-size: 25px
+			+sm
+				margin-right: 7px
+				font-size: 20px
 	&__address
-	
+		+xs
+			display: none
+	&__mail
+		margin-left: 86px
+		+md
+			margin-left: 40px
+		+sm
+			margin-left: 20px
+		+xs
+			margin-left: 0
+		
 	&__tel
+		margin-left: 74px
+		+md
+			margin-left: 40px
+		+sm
+			margin-left: 20px
+		+xs
+			margin-left: 0
+			margin-bottom: 10px
+			order: -1
+		#{$parent}_footer &
+			margin-left: 84px
+			+sm
+				margin-left: 22px
+			+xs
+				margin-left: 0
 		a
 			+f('hel-700', 26)
 			+trs
+			+sm
+				font-size: 18px
+			+xs
+				font-size: 16px
 			.no-touch &:hover
 				color: #e9e9e9
 		span
 			font-size: 22px
 			border-bottom: 0
+			+sm
+				font-size: 15px
+	&__dev
+		margin-left: 70px
+		font-size: 16px
+		+md
+			display: none
+		+xs
+			display: block
+			margin-top: 10px
+			font-size: 14px
+			margin-left: 0
 	&_header
+		+xs
+			display: none
+	&_footer
+		margin-right: 13px
+		+xs
+			align-items: center
+			margin-right: 0
+			margin-top: 15px
+	&_mobile
+		display: none
+		align-items: center
+		margin-top: 40px
+		+xs
+			display: flex
 	
 /* dropdown
 	----------------------------------- */
@@ -66,13 +130,20 @@
 		font-size: 16px
 		border-bottom: 1px solid #fff
 		+trs
+		+sm
+			font-size: 14px
 	.icon-loc
-		margin-right: 12px
+		margin-right: 14px
 		font-size: 22px
+		+sm
+			margin-right: 4px
+			font-size: 18px
 	.icon-arr-d
-		margin-left: 8px
+		margin-left: 12px
 		font-size: 12px
 		+trs
+		+sm
+			margin-left: 8px
 	ul
 		position: absolute
 		top: -10px
@@ -117,8 +188,20 @@
 	 career
 	 =================================== */
 .career
-	padding: 65px 0 35px
+	padding: 55px 0 40px
 	background: url("../img/bg/career_bg.jpg") no-repeat 50% 50% / cover
+	+lg
+		padding: 40px 0 30px
+		background-position: 51% 50%
+	+r(1365)
+		background-position: 64% 50%
+	+md
+		background-position: 20% 50%
+	+xs
+		padding: 30px 0
+	&__container
+		+lg
+			max-width: none
 	&__text
 		max-width: 850px
 		margin: 0 auto 20px
@@ -126,35 +209,63 @@
 		color: #fff
 		p
 			font-size: 22px
+			+lg
+				font-size: 18px
+			+xs
+				font-size: 15px
 	&__title
-		margin-bottom: 15px
+		margin-bottom: 28px
+		+lg
+			margin-bottom: 10px
+			font-size: 40px
+		+xs
+			font-size: 24px
+			margin-bottom: 5px
 	&__sub-title
+		margin-bottom: 12px
 		font-size: 32px
 		text-transform: uppercase
 		color: #fff
+		+lg
+			margin-bottom: 7px
+			font-size: 28px
+		+xs
+			font-size: 18px
 	&__want-btn
-		margin-top: 20px
+		margin-top: 23px
 
 /* ===================================
 	 reason
 	 =================================== */
 .reason
-	padding: 65px 0 55px
+	padding: 60px 0 80px
+	+sm
+		padding: 55px 0
 	&__inner
-		margin: 40px 0 0
+		margin: 55px 0 0
 		font-size: 0
 		text-align: center
+		+xs
+			margin: 35px 0 0
 	&__card
 		display: inline-block
 		vertical-align: top
 		width: 33.33333%
-		padding: 0 10px 65px
+		padding: 0 10px 85px
 		text-align: center
 		$parent: &
+		+sm
+			width: 50%
+			padding: 0 10px 35px
+		+xs
+			width: 100%
+			padding: 0 0 30px
+		&:nth-child(n + 8)
+			padding-bottom: 0
 		&:nth-child(n + 4)
 			display: none
 		&:nth-child(n + 4) #{$parent}-descr
-			margin-top: 0
+			margin-top: 5px
 		&-img
 			position: relative
 			margin: 0 auto 25px
@@ -162,6 +273,8 @@
 			width: percentage(318 / 398)
 			overflow: hidden
 			+cover-img
+			+md
+				width: 100%
 			&::after, &::before
 				position: absolute
 				content: ''
@@ -181,10 +294,15 @@
 		&-title
 			+f('hel-700', 18)
 			text-transform: uppercase
+			&_short
+				max-width: 300px
+				margin: 0 auto
 		&-descr
 			max-width: 260px
-			margin: 20px auto 0
+			margin: 24px auto 0
 			font-size: 14px
+			+xs
+				margin: 10px auto 0
 	&__more-btn
 		padding: 19px 44px
 
@@ -194,7 +312,7 @@
 .success
 	position: relative
 	z-index: 1
-	padding: 55px 0
+	padding: 50px 0 55px
 	background-color: #1d71b8
 	&::after
 		+coverdiv
@@ -204,11 +322,22 @@
 		background: url("../img/bg/success_bg.png") no-repeat 50% 50% / cover
 	&__container
 		text-align: center
+	&__title
+		+sm
+			font-size: 29px
+		+xs
+			font-size: 22px
 	&__slider
 		display: none
 		position: relative
-		padding: 55px 67px
-		margin-bottom: 30px
+		padding: 55px
+		margin-bottom: 45px
+		+sm
+			padding: 20px 55px
+			margin-bottom: 35px
+		+xs
+			padding: 20px 0
+			margin-bottom: 25px
 		&::after
 			position: absolute
 			top: 0
@@ -217,6 +346,9 @@
 			width: 1px
 			background: rgba(#fff, .3)
 			content: ''
+			z-index: -1
+			+md
+				display: none
 		&.slick-initialized
 			display: block
 		.slick-list
@@ -241,6 +373,22 @@
 				fill: rgba(#fff, .3)
 			.no-touch &:hover .icon
 				fill: rgba(#fff, .3)
+		.slider-dots
+			margin-top: 15px
+			li
+				display: inline-block
+				vertical-align: middle
+				width: 15px
+				height: 15px
+				border-radius: 50%
+				background: #fff
+				+trs
+				&:not(:first-child)
+					margin-left: 10px
+				&.slick-active
+					background: #f39200
+			button
+				+hide-text
 				
 	&__person
 		margin: 0 15px
@@ -257,17 +405,29 @@
 			border-radius: 20px
 			overflow: hidden
 			+cover-img
+			+xs
+				display: block
+				margin: 0 auto 15px
+				width: 100%
+				height: auto
 		&-text
 			display: inline-block
 			vertical-align: middle
 			width: calc(100% - 226px)
 			padding: 0 5px 0 20px
+			+xs
+				padding: 0
+				width: 100%
 		&-name
 			margin-bottom: 5px
 			font-size: 18px
-		p
-			font-size: 14px
-			color: #4e4e4e
+		&-feed
+			height: 118px
+			+md
+				height: auto
+			p
+				font-size: 14px
+				color: #4e4e4e
 		&-story
 			margin-top: 15px
 		
@@ -278,14 +438,25 @@
 	 rest
 	 =================================== */
 .rest
-	padding: 40px 0 50px
+	padding: 35px 0 50px
 	&__container
 		text-align: center
+	&__title
+		+sm
+			font-size: 31px
 	&__descr
-		margin: 45px 0 20px
+		margin: 42px 0 28px
 		font-size: 18px
+		+sm
+			font-size: 16px
+		+xs
+			margin: 30px 0 25px
 	&__photos
-		margin: 0 -6px 45px
+		margin: 0 -6px 55px
+		+sm
+			margin: 0 -6px 40px
+		+xs
+			margin: 0 0 30px
 		&:last-child
 			margin-bottom: 0
 		$parent: &
@@ -295,11 +466,21 @@
 			margin: 0 6px
 			width: calc(25% - 15px)
 			+ratio(304, 251)
+			+sm
+				width: calc(50% - 15px)
+				margin-bottom: 15px
+			+xs
+				width: 100%
+				margin: 0 0 10px
 			img
 				+coverdiv
+				width: 100%
+				height: 100%
 			&:hover #{$parent}-icon
 				opacity: 1
 				transform: scale(1)
+				+sm
+					transform: scale(.7)
 			&_blue-bg
 				position: relative
 				&:hover::after
@@ -313,6 +494,8 @@
 					content: ''
 					transition: .2s ease-in-out
 					z-index: 0
+					+sm
+						display: none
 					
 		&-icon
 			opacity: 0
@@ -328,6 +511,9 @@
 			background: rgba(#f39200, .7)
 			border-radius: 50%
 			transition: transform .4s cubic-bezier(0.23, -0.43, 0.24, 1.9), opacity .5s ease
+			+sm
+				opacity: 1
+				transform: scale(.7)
 			&::after
 				position: absolute
 				top: 8px
@@ -353,37 +539,69 @@
 					margin-left: -20px
 					font-size: 43px
 		&-descr
-			margin: 10px 0 0
+			max-width: 1190px
+			margin: 12px auto 0
+			font-size: 16px
 			text-align: center
 	&__want-btn
+		margin-top: 15px
 		padding: 19px 58px
 		
 .contact-map
 	position: relative
 	&__body
 		height: 667px
+		+lg
+			height: 500px
+		+xs
+			height: 360px
 	&__nav
 		position: absolute
 		top: 110px
 		left: 50%
-		margin-left: -630px
+		margin-left: -640px
 		width: 380px
-		padding: 30px 30px 45px
+		padding: 25px 20px 45px 25px
 		border-radius: 10px
 		background-color: rgba(#ec6600, .8)
+		z-index: 1
+		+md
+			left: 10px
+			margin-left: 0
+		+sm
+			position: static
+			width: 100%
+			border-radius: 10px 10px 0 0
+			padding: 20px 15px 10px
 		&-title
-			//padding-bottom: 25px
 			font-size: 22px
 			color: #fff
+			+sm
+				padding-bottom: 10px
 			&::after
 				background: #fff
 		&-streets
 			margin-top: 20px
+			padding-left: 25px
 			color: #fff
 			font-size: 18px
+			+sm
+				margin: 12px 0 0
+				padding-left: 0
+				font-size: 15px
+				text-align: center
+			+xs
+				text-align: left
 			li
+				+sm
+					display: inline-block
+					margin: 0 5px 10px
+				+xs
+					display: block
 				&:not(:first-child)
-					margin-top: 12px
+					margin-top: 19px
+					+sm
+						margin-top: 0
 				.icon
 					display: inline-block
 					vertical-align: middle
@@ -398,6 +616,8 @@
 					
 	&__data
 		padding: 15px
+		+xs
+			padding: 0
 	&__text
 		+f('hel-400', 16)
 		color: #323232

@@ -7,7 +7,7 @@
 	opacity: 0
 	visibility: hidden
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
-	z-index: 1050
+	z-index: 1300
 	overflow: auto
 	outline: 0
 	text-align: center
@@ -40,6 +40,12 @@
 		border-radius: 50%
 		background-color: #f39200
 		+trs
+		+xs
+			top: -17px
+			right: -6px
+		#{$parent}_story &
+			+xs
+				right: 5px
 		.no-touch &:hover::after
 			background-color: #f39200
 		&::after
@@ -69,7 +75,7 @@
 		width: 100%
 		max-width: 600px
 		position: relative
-		padding: 40px 0 30px
+		padding: 25px 0 35px
 		background: $white
 		box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2)
 		margin: 30px auto
@@ -80,11 +86,19 @@
 		#{$parent}_request &
 			max-width: 498px
 			background-color: #e38902
+			+xs
+				max-width: 300px
+				padding: 20px 10px 30px
 		#{$parent}_story &
 			position: relative
 			min-width: 880px
-			padding: 15px 30px 25px 15px
+			padding: 15px 30px 30px 15px
 			background-color: #fff
+			+sm
+				min-width: 720px
+			+xs
+				min-width: 0
+				padding: 15px 10px 25px 10px
 			&::after
 				position: absolute
 				border-top: 1px solid #be7266
@@ -100,9 +114,13 @@
 		max-width: 314px
 		margin: 0 auto
 	&__title
+		padding: 0 10px
 		margin-bottom: 23px
 		color: #fff
 		font-size: 18px
+		#{$parent}_request &
+			+xs
+				font-size: 16px
 	&__form
 		&-field
 			position: relative
@@ -136,16 +154,26 @@
 		&-img
 			float: left
 			width: 226px
+			border-radius: 20px
+			overflow: hidden
+			+xs
+				float: none
+				width: 100%
 		&-text
 			float: left
 			width: calc(100% - 226px)
+			padding-top: 20px
 			padding-left: 22px
 			text-align: left
+			+xs
+				float: none
+				width: 100%
+				padding-left: 0
 			p
 				font-size: 14px
 				color: #4e4e4e
 				&:not(:first-child)
-					margin-top: 15px
+					margin-top: 17px
 		&-name
 			margin-bottom: 18px
 			font-size: 18px

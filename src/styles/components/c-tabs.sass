@@ -2,6 +2,8 @@
 	position: relative
 	max-width: 968px
 	+clr
+	+md
+		margin: 0 auto
 	$parent: &
 	&.is-active
 		z-index: 1101
@@ -29,8 +31,13 @@
 			float: left
 			width: 285px
 			font-size: 0
+			+sm
+				width: 240px
+			+xs
+				width: 100%
+				float: none
 		&-el
-			padding: 0 15px
+			padding: 0 17px
 			height: 71px
 			cursor: pointer
 			border-radius: 10px 0 0 10px
@@ -38,6 +45,11 @@
 			+trs
 			+vertical
 			text-align: left
+			+sm
+				padding: 0 13px
+			+xs
+				height: 46px
+				border-radius: 10px
 			&:not(:first-child)
 				margin-top: 1px
 			span
@@ -45,6 +57,12 @@
 				vertical-align: middle
 				+f('hel-700', 16)
 				color: $white
+				+sm
+					font-size: 14px
+				+xs
+					width: 100%
+					br
+						display: none
 			&.is-active
 				pointer-events: none
 				background-color: rgba(#c05100, .9)
@@ -55,12 +73,24 @@
 			border-radius: 0 10px 10px 0
 			background-color: rgba(#fff, .9)
 			+trs
-			
+			+sm
+				width: calc(100% - 240px)
+			+xs
+				width: 100%
+				float: none
+				height: auto!important
+				margin-top: 10px
+				border-radius: 10px
+				
 	&__tab
 		display: flex
 		align-items: center
 		height: 100%
 		padding: 5px 23px 5px 27px
+		+sm
+			padding: 5px 10px
+		+xs
+			padding: 10px
 		&:not(:first-child)
 			display: none
 		p
@@ -69,12 +99,16 @@
 			strong
 				+f('hel-700')
 			&:not(:first-child)
-				margin-top: 20px
+				margin-top: 18px
+				+sm
+					margin-top: 8px
 		&-in
 			text-align: center
 	&__more
 		position: relative
 		margin-top: 20px
+		+sm
+			margin-top: 7px
 		&-info
 			display: none
 			position: absolute
@@ -83,18 +117,28 @@
 			right: -23px
 			z-index: 100
 			background: #fff
-			//&.is-visible
-			//	display: block
+			border-radius: 0 0 10px 0
+			overflow: hidden
+			+sm
+				left: -10px
+				right: -10px
+			+xs
+				border-radius: 0 0 10px 10px
 		&-text
-			padding: 0 23px 35px 27px
+			padding: 0 23px 40px 27px
 			text-align: left
+			+sm
+				padding: 0 10px 20px 10px
 			p
 				&:not(:first-child)
 					margin-top: 15px
 		&-list
-			margin: 20px 0
+			&:not(:first-child)
+				margin-top: 28px
+				+sm
+					margin-top: 18px
 			ul
-				padding-left: 16px
+				padding-left: 20px
 				li
 					position: relative
 					&::after
@@ -106,18 +150,50 @@
 						background-color: #f39200
 						content: ''
 					&:not(:first-child)
-						margin-top: 8px
+						margin-top: 7px
 			&-title
+				padding-bottom: 4px
 				margin-bottom: 15px
 				+f('hel-700')
 				border-bottom: 1px solid #1b69ac
 				color: #303030
-	
+				+sm
+					margin-bottom: 9px
+		&-actions
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 8px 30px
+			background: #fd8a00
+			+sm
+				padding: 8px
+			+xs
+				padding: 10px 5px
+				flex-direction: column
+		&-salary
+			color: #fff
+			+xs
+				margin-bottom: 10px
+			p
+				+f('hel-700', 14)
+				+xs
+					text-align: center
+			span
+				+f('hel-400', 18)
+				+sm
+					font-size: 15px
+				+xs
+					display: block
+		&-request
+			+sm
+				padding: 7px 18px
+				font-size: 16px
+				line-height: 16px
 	&__close
 		opacity: 0
 		visibility: hidden
 		position: absolute
-		top: -17px
+		top: -11px
 		right: -17px
 		cursor: pointer
 		width: 37px
@@ -128,6 +204,9 @@
 		border-radius: 50%
 		background-color: #f39200
 		transition: opacity .4s ease, visibility .4s ease
+		+sm
+			top: -24px
+			right: -10px
 		.no-touch &:hover::after
 			background-color: #f39200
 		&::after

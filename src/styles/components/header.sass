@@ -1,26 +1,85 @@
 .header
 	&__contact
-		height: 73px
+		padding: 7px 0
 		border-top: 2px solid #033b6c
 		background-color: #1d71b8
+		+xs
+			padding: 0
+			height: 62px
 		&-container
 			display: flex
 			justify-content: space-between
 			align-items: center
 			height: 100%
 	&__logo
+		+md
+			width: 180px
+		+xs
+			width: 140px
+	&__hamburger
+		margin-top: 6px!important
+		+xs
+			display: block
 	
 .nav
-	padding: 19px 0
+	padding: 21px 0
 	background: #fff
+	+sm
+		padding: 13px 0
+	+xs
+		display: flex
+		flex-direction: column
+		justify-content: center
+		position: absolute
+		width: 100%
+		height: 100vh
+		top: 62px
+		left: 0
+		bottom: 0
+		right: 0
+		z-index: 10
+		overflow: auto
+		opacity: 0
+		visibility: hidden
+		padding: 0
+		transform: translate3d(0, 100px, 0)
+		transition: transform .4s ease, opacity .4s ease, visibility 0s .4s
+		background: #1d71b8
+	&.is-active
+		opacity: 1
+		visibility: visible
+		-webkit-transform: translate3d(0, 0, 0)
+		transform: translate3d(0, 0, 0)
+		transition: transform .4s ease, opacity .4s ease, visibility 0s 0s
 	&__list
 		display: flex
 		justify-content: space-between
+		+xs
+			flex-direction: column
+			justify-content: center
+			margin-top: -60px
+			overflow: auto
+			padding: 0
+		li
+			padding: 0 17px
+			+sm
+				padding: 0
+			+xs
+				margin: 8px 0
+				text-align: center
+			&:last-child
+				padding-right: 0
 		a
 			color: #1d71b8
 			font-size: 16px
 			border-bottom: 1px solid transparent
 			+trs
+			+sm
+				font-size: 14px
+			+xs
+				display: block
+				padding: 10px
+				font-size: 17px
+				color: #fff
 			.no-touch &:hover
 				border-bottom-color: #1d71b8
-				

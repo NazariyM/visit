@@ -4,7 +4,7 @@ if rest.title ? rest.title : rest.title = 'ХОРОШО РАБОТАЕМ – О�
 //begin rest
 +b.SECTION.rest(class= rest.classMod ? rest.classMod : '')
 	+e.container.container
-		+b.H2.title-md= rest.title
+		+e.H2.title.title-md= rest.title
 		+e.descr
 			+e.P Мы не боимся трудностей, с радостью и энтузиазмом ставим себе амбициозные цели и гордимся своими успехами.
 			+e.P Вне рабочих задач мы тоже много общаемся и собираемся вместе, чтобы провести выходные, отметить праздники или научиться чему-то новому.  
@@ -12,7 +12,7 @@ if rest.title ? rest.title : rest.title = 'ХОРОШО РАБОТАЕМ – О�
 		+e.photos
 			-i = 1
 			while i < 5
-				+e.A.photos-img-big(href='static/img/content/rest-big-img.jpg' data-fancybox='rest-photos-1')
+				+e.A.photos-img-big(href='https://www.youtube.com/watch?v=_sI_Ps7JSEk' data-fancybox)
 					+e.DIV.IMG(src=`static/img/content/rest-${i}.jpg` alt='image')
 					+e.DIV.photos-icon
 						+i('play')
@@ -24,7 +24,7 @@ if rest.title ? rest.title : rest.title = 'ХОРОШО РАБОТАЕМ – О�
 		+e.photos
 			-j = 5
 			while j < 9
-				+e.A.photos-img-big._blue-bg(href='static/img/content/rest-big-img.jpg' data-fancybox='rest-photos-2')
+				+e.A.photos-img-big._blue-bg(href='static/img/content/rest-big-img.jpg' data-fancybox='rest-photos')
 					+e.DIV.IMG(src=`static/img/content/rest-${j}.jpg` alt='image')
 					+e.DIV.photos-icon
 						+i('loupe')

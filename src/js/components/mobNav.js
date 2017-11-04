@@ -9,7 +9,7 @@ export class MobNav {
   toggleNav() {
     this.$btn.on('click', function () {
       $(this).toggleClass(css.active);
-      $(this).parent().prev(this.$nav).toggleClass(css.active);
+      $(this).closest('.header__contact').next(this.$nav).toggleClass(css.active);
       $body.toggleClass(css.locked);
     });
   }

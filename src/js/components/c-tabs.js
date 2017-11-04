@@ -1,5 +1,5 @@
 import { TweenMax } from 'gsap';
-import { $window, $body, css } from '../modules/dev/helpers';
+import { css } from '../modules/dev/helpers';
 
 export default class CTabs {
   constructor(el) {

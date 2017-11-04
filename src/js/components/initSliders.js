@@ -23,27 +23,15 @@ export function initSliders() {
   const $successSld = $('.js-success-slider');
   $successSld.slick($.extend({}, defaultOptions, {
     responsive: [{
-      breakpoint: 1023,
+      breakpoint: 1279,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true
       }
     }]
   }));
 
-  // const $mobileSlider = $('.js-mobile-slider');
-  // $mobileSlider.slick($.extend({}, defaultOptions, {
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   dots: true,
-  //   arrows: false,
-  //   adaptiveHeight: true,
-  //   mobileFirst: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: 'unslick'
-  //     }
-  //   ]
-  // }));
 }
