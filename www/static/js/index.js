@@ -8339,7 +8339,7 @@ if (_gsScope._gsDefine) { _gsScope._gsQueue.pop()(); } //necessary in case Tween
 
 __webpack_require__(5);
 
-__webpack_require__(20);
+__webpack_require__(21);
 
 /***/ }),
 /* 5 */
@@ -8375,13 +8375,13 @@ var _fancybox = __webpack_require__(13);
 
 var _fancybox2 = _interopRequireDefault(_fancybox);
 
-var _mobNav = __webpack_require__(23);
+var _mobNav = __webpack_require__(14);
 
-var _showReasons = __webpack_require__(14);
+var _showReasons = __webpack_require__(15);
 
-var _initSliders = __webpack_require__(15);
+var _initSliders = __webpack_require__(16);
 
-var _initContactMap = __webpack_require__(19);
+var _initContactMap = __webpack_require__(20);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -14565,6 +14565,66 @@ module.exports = fix;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.MobNav = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _helpers = __webpack_require__(0);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobNav = exports.MobNav = function () {
+  function MobNav() {
+    _classCallCheck(this, MobNav);
+
+    this.$btn = $('.js-hamburger');
+    this.$nav = $('.js-nav');
+    this.init();
+  }
+
+  _createClass(MobNav, [{
+    key: 'toggleNav',
+    value: function toggleNav() {
+      this.$btn.on('click', function () {
+        $(this).toggleClass(_helpers.css.active);
+        $(this).closest('.header__contact').next(this.$nav).toggleClass(_helpers.css.active);
+        _helpers.$body.toggleClass(_helpers.css.locked);
+      });
+    }
+  }, {
+    key: 'onResize',
+    value: function onResize() {
+      var _this = this;
+
+      _helpers.$window.on('resize', function () {
+        _this.$nav.removeClass(_helpers.css.active);
+        _this.$btn.removeClass(_helpers.css.active);
+        _helpers.$body.removeClass(_helpers.css.locked);
+      });
+    }
+  }, {
+    key: 'init',
+    value: function init() {
+      this.toggleNav();
+      this.onResize();
+    }
+  }]);
+
+  return MobNav;
+}();
+
+exports.default = new MobNav();
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.showReasons = showReasons;
 
 var _gsap = __webpack_require__(2);
@@ -14593,7 +14653,7 @@ function showReasons() {
 }
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14604,7 +14664,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.initSliders = initSliders;
 
-var _slickCarousel = __webpack_require__(16);
+var _slickCarousel = __webpack_require__(17);
 
 var _slickCarousel2 = _interopRequireDefault(_slickCarousel);
 
@@ -14647,7 +14707,7 @@ function initSliders() {
 }
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -17667,9 +17727,9 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 17 */,
 /* 18 */,
-/* 19 */
+/* 19 */,
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17791,7 +17851,7 @@ function initContactMap() {
 }
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17809,7 +17869,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * @module PublicAPI
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */
 
-var _Timer = __webpack_require__(21);
+var _Timer = __webpack_require__(22);
 
 var _Timer2 = _interopRequireDefault(_Timer);
 
@@ -17850,7 +17910,7 @@ var PublicAPI = exports.PublicAPI = function () {
 exports.default = window.PublicAPI = PublicAPI;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17928,67 +17988,6 @@ var Timer = exports.Timer = function Timer() {
 ;
 
 exports.default = new Timer();
-
-/***/ }),
-/* 22 */,
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.MobNav = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _helpers = __webpack_require__(0);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobNav = exports.MobNav = function () {
-  function MobNav() {
-    _classCallCheck(this, MobNav);
-
-    this.$btn = $('.js-hamburger');
-    this.$nav = $('.js-nav');
-    this.init();
-  }
-
-  _createClass(MobNav, [{
-    key: 'toggleNav',
-    value: function toggleNav() {
-      this.$btn.on('click', function () {
-        $(this).toggleClass(_helpers.css.active);
-        $(this).closest('.header__contact').next(this.$nav).toggleClass(_helpers.css.active);
-        _helpers.$body.toggleClass(_helpers.css.locked);
-      });
-    }
-  }, {
-    key: 'onResize',
-    value: function onResize() {
-      var _this = this;
-
-      _helpers.$window.on('resize', function () {
-        _this.$nav.removeClass(_helpers.css.active);
-        _this.$btn.removeClass(_helpers.css.active);
-        _helpers.$body.removeClass(_helpers.css.locked);
-      });
-    }
-  }, {
-    key: 'init',
-    value: function init() {
-      this.toggleNav();
-      this.onResize();
-    }
-  }]);
-
-  return MobNav;
-}();
-
-exports.default = new MobNav();
 
 /***/ })
 ],[4]);

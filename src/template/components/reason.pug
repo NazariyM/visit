@@ -11,7 +11,7 @@ if reason.moreBtn ? reason.moreBtn : reason.moreBtn = 'ПОСМОТРЕТЬ ЕЩ
 
 			mixin reasonCard(item)
 				+e.card
-					+e.card-img
+					+e.card-img.img-decor
 						+e.IMG(src=`static/img/content/reason-${item.img}.jpg` alt='image')
 					+e.card-text
 						+e.H4.card-title(class= item.titleMod ? item.titleMod : '')= item.title

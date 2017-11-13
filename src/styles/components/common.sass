@@ -110,3 +110,38 @@ body
     .no-touch &:hover
       color: #f39200
       border-bottom-color: currentColor
+      
+.img-decor
+  position: relative
+  height: 196px
+  overflow: hidden
+  +cover-img
+  +md
+    width: 100%
+  &::after, &::before
+    position: absolute
+    content: ''
+    transition: transform .3s ease
+  &::before
+    bottom: 0
+    left: 0
+    +arr(135, 48, #f39200, bl)
+  &::after
+    top: 0
+    right: 0
+    +arr(48, 135, #1b69ac, tr)
+  &:hover::before
+    transform: translateX(-100%)
+  &:hover::after
+    transform: translateX(100%)
+    
+.section-decor
+  position: relative
+  z-index: 1
+  background: #1d71b8
+  &::after
+    +coverdiv
+    z-index: -1
+    opacity: .1
+    content: ''
+    background: url(../img/bg/success_bg.png) no-repeat 50% 50%/cover

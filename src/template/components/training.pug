@@ -1,0 +1,26 @@
+if training ? training : training = []
+if training.teaserTitle ? training.teaserTitle : training.teaserTitle = 'НЕ УПУСТИТЕ ВОЗМОЖНОСТЬ ПРИНЯТЬ УЧАСТИЕ В ТРЕНИНГЕ'
+if training.title ? training.title : training.title = 'МЕГА ТРЕНИНГ ДЛЯ УЧЕБЫ'
+if training.date ? training.date : training.date = '15 ноября'
+if training.time ? training.time : training.time = 'с 10:00 до 18:00'
+if training.location ? training.location : training.location = 'ул. Ленина, 152, оф. 166'
+
+//begin training
++b.SECTION.training.section-decor(class= training.classMod ? training.classMod : '')
+	+e.container.container
+		+e.H2.teaser-title.title-md._white= training.teaserTitle
+		+e.H3.title= training.title
+		+e.details
+			+e.details-item
+				+e.details-icon
+					.icon-calendar
+				+e.details-text= training.date
+			+e.details-item
+				+e.details-icon
+					.icon-clock
+				+e.details-text= training.time
+			+e.details-item
+				+e.details-icon
+					.icon-location
+				+e.details-text= training.location
+		+e.BUTTON.want-btn.btn._has-blue-bg(type='button') ХОЧУ ПРИНЯТЬ УЧАСТИЕ

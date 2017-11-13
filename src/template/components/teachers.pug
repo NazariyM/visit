@@ -1,0 +1,20 @@
+if teachers ? teachers : teachers = []
+if teachers.title ? teachers.title : teachers.title = 'УЧЕБНЫЙ ЦЕНТР В ЛИЦАХ'
+
+//begin teachers
++b.SECTION.teachers(class= teachers.classMod ? teachers.classMod : '')
+	+e.container.container
+		+b.H2.title-md= teachers.title
+		-
+			personsList = [
+			'Быкова Ирина',
+			'Лазарева Юлия',
+			'Фролова Людмила',
+			'Гориянова Ольга'
+			]
+		+e.persons-list
+			for personName, index in personsList
+				+e.person
+					+e.person-img
+						+e.IMG(src=`static/img/content/teachers-${index + 1}.jpg` alt='image')
+					+e.person-name= personName

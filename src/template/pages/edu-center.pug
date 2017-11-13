@@ -1,0 +1,23 @@
+extends ../extend/default
+
+block variables
+	- var title = 'Визит';
+	- var contactMap = false;
+
+block main
+	main.content
+
+	//begin edu-center
+	+b.SECTION.edu-center
+		+e.container.container
+			+e.H2.title.title-lg УЧЕБНЫЙ ЦЕНТР
+			+e.descr
+				+e.P Воспользуйтесь возможностью получить практический опыт ведущих специалистов в сфере недвижимости в Самаре, повысить свои профессиональные навыки или освоить для себя новую профессию!
+		+e.bg(style='background-image: url(static/img/bg/edu-center_bg.jpg)')
+
+
+	include ../components/about
+
+	include ../components/training
+
+	include ../components/teachers
