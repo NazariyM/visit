@@ -1,5 +1,106 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <!--begin header-->
+  <header class="header">
+    <div class="header__contact">
+      <div class="header__contact-container container">
+        <a class="header__logo" href="#!">
+          <img src="static/img/logo.png" alt="Визит" title="" />
+        </a>
+        <div class="contact-line contact-line_header">
+          <div class="contact-line__item contact-line__address">
+            <div class="dropdown">
+              <div class="dropdown__line">
+                <svg class="icon icon-loc">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loc"></use>
+                </svg>
+                <div class="dropdown__text">Адреса офисов</div>
+                <svg class="icon icon-arr-d">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arr-d"></use>
+                </svg>
+              </div>
+              <ul>
+                <li>
+                  <a href="#!">ул. Революционная, 126</a>
+                </li>
+                <li>
+                  <a href="#!">ул. Победы, 16</a>
+                </li>
+                <li>
+                  <a href="#!">ул. Победы, 108</a>
+                </li>
+                <li>
+                  <a href="#!">ул. Стара-Загора, 53</a>
+                </li>
+                <li>
+                  <a href="#!">ул. Мичурина, 116</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-line__item contact-line__mail">
+            <a href="mailto:mail.com">
+              <svg class="icon icon-email">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use>
+              </svg>
+              <span>Написать нам</span>
+            </a>
+          </div>
+          <div class="contact-line__item contact-line__tel">
+            <a href="tel:+78462265058">
+              <svg class="icon icon-phone">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
+              </svg>
+              <span>+7 (846)&nbsp;</span>226-50-58</a>
+          </div>
+        </div>
+        <button class="hamburger header__hamburger hamburger--spring js-hamburger" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav js-nav">
+      <ul class="nav__list container">
+        <li>
+          <a href="#!">Алгоритм работы</a>
+        </li>
+        <li>
+          <a href="#!">Экономия во всем</a>
+        </li>
+        <li>
+          <a href="#!">Пример подбора недвижимости</a>
+        </li>
+        <li>
+          <a href="#!">О компании</a>
+        </li>
+        <li>
+          <a href="#!">Отзывы</a>
+        </li>
+        <li>
+          <a href="#!">Контакты</a>
+        </li>
+      </ul>
+      <div class="contact-line contact-line_mobile">
+        <div class="contact-line__item contact-line__mail">
+          <a href="mailto:mail.com">
+            <svg class="icon icon-email">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use>
+            </svg>
+            <span>Написать нам</span>
+          </a>
+        </div>
+        <div class="contact-line__item contact-line__tel">
+          <a href="tel:+78462265058">
+            <svg class="icon icon-phone">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
+            </svg>
+            <span>+7 (846)&nbsp;</span>226-50-58</a>
+        </div>
+      </div>
+    </nav>
+  </header>
   <head>
     <meta name="format-detection" content="telephone=no">
     <meta charset="utf-8">
@@ -62,107 +163,6 @@
     <script>
       document.createElement('picture');
     </script>
-    <!--begin header-->
-    <header class="header">
-      <div class="header__contact">
-        <div class="header__contact-container container">
-          <a class="header__logo" href="#!">
-            <img src="static/img/logo.png" alt="Визит" title="" />
-          </a>
-          <div class="contact-line contact-line_header">
-            <div class="contact-line__item contact-line__address">
-              <div class="dropdown">
-                <div class="dropdown__line">
-                  <svg class="icon icon-loc">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loc"></use>
-                  </svg>
-                  <div class="dropdown__text">Адреса офисов</div>
-                  <svg class="icon icon-arr-d">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arr-d"></use>
-                  </svg>
-                </div>
-                <ul>
-                  <li>
-                    <a href="#!">ул. Революционная, 126</a>
-                  </li>
-                  <li>
-                    <a href="#!">ул. Победы, 16</a>
-                  </li>
-                  <li>
-                    <a href="#!">ул. Победы, 108</a>
-                  </li>
-                  <li>
-                    <a href="#!">ул. Стара-Загора, 53</a>
-                  </li>
-                  <li>
-                    <a href="#!">ул. Мичурина, 116</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="contact-line__item contact-line__mail">
-              <a href="mailto:mail.com">
-                <svg class="icon icon-email">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use>
-                </svg>
-                <span>Написать нам</span>
-              </a>
-            </div>
-            <div class="contact-line__item contact-line__tel">
-              <a href="tel:+78462265058">
-                <svg class="icon icon-phone">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
-                </svg>
-                <span>+7 (846)&nbsp;</span>226-50-58</a>
-            </div>
-          </div>
-          <button class="hamburger header__hamburger hamburger--spring js-hamburger" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        </div>
-      </div>
-      <nav class="nav js-nav">
-        <ul class="nav__list container">
-          <li class="is-active">
-            <a href="#!">Алгоритм работы</a>
-          </li>
-          <li>
-            <a href="#!">Экономия во всем</a>
-          </li>
-          <li>
-            <a href="#!">Пример подбора недвижимости</a>
-          </li>
-          <li>
-            <a href="#!">О компании</a>
-          </li>
-          <li>
-            <a href="#!">Отзывы</a>
-          </li>
-          <li>
-            <a href="#!">Контакты</a>
-          </li>
-        </ul>
-        <div class="contact-line contact-line_mobile">
-          <div class="contact-line__item contact-line__mail">
-            <a href="mailto:mail.com">
-              <svg class="icon icon-email">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use>
-              </svg>
-              <span>Написать нам</span>
-            </a>
-          </div>
-          <div class="contact-line__item contact-line__tel">
-            <a href="tel:+78462265058">
-              <svg class="icon icon-phone">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
-              </svg>
-              <span>+7 (846)&nbsp;</span>226-50-58</a>
-          </div>
-        </div>
-      </nav>
-    </header>
     <main class="content"></main>
     <!--begin career-->
     <section class="career">

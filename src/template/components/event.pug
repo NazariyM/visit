@@ -1,0 +1,13 @@
+if event ? event : event = []
+
+//begin event
++b.SECTION.event.section-decor(class= event.classMod ? event.classMod : '')
+	+e.container.container
+		+e.H4.title
+			+e.SPAN
+				+e.STRONG Каждый четверг
+				= ' '
+				| в 15:00
+				= ' '
+			| наша Компания проводит «День открытых дверей» для людей, желающих освоить новую профессию
+		+e.BUTTON.btn.btn._transparent(type='button') ОТПРАВИТЬ

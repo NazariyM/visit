@@ -1,0 +1,50 @@
+if activities ? activities : activities = []
+
+//begin activities
++b.SECTION.activities(class= activities.classMod ? activities.classMod : '')
+	+e.container.container
+		+b.H2.title-md БЛИЖАЙШИЕ МЕРОПРИЯТИЯ
+		+e.table-wrap
+			table.activities__table
+				thead
+					tr
+						td Дата
+						td Название мероприятия
+						td Спикер
+						td
+				tbody
+					tr
+						td 12 ноября
+						td Мастер-класс “Как продать бумажный самолет”
+						td Быкова Ирина
+						td
+							+e.A.table-btn.btn(href='#!') Принять участие
+					tr
+						td 14 ноября
+						td Конференция “Правильно оформление документов”
+						td Лазарева Юлия
+						td
+							+e.A.table-btn.btn(href='#!') Принять участие
+					tr
+						td 21 ноября
+						td Мастер-класс “Как продать бумажный самолет”
+						td Фролова Людмила
+						td
+							+e.A.table-btn.btn(href='#!') Принять участие
+					tr
+						td 27 ноября
+						td Вебинар “Ключ от дома”
+						td Быкова Ирина
+						td
+							+e.A.table-btn.btn(href='#!') Принять участие
+					tr
+						td 1 декабря
+						td Мастер-класс “Как продать бумажный самолет”
+						td Гориянова Ольга
+						td
+							+e.A.table-btn.btn(href='#!') Принять участие
+
+		+e.descr
+			p Присоединяйтесь к команде профессионалов рынка недвижимости!
+			p Приходите на работу в нашу Компанию и мы поможем Вам увеличить продажи и зарабатывать больше!
+		+e.BUTTON.watch-btn.btn._blue(type='button') ПОСМОТРЕТЬ ВАКАНСИИ

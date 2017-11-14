@@ -20,7 +20,9 @@ if about ? about : about = []
 				+e.study-card
 					+e.study-card-img.img-decor
 						+e.IMG(src='static/img/content/about-3.jpg' alt='image')
-					+e.H5.study-card-title ИНДИВИДУАЛЬНУЮ РАБОТУ, В ТОМ ЧИСЛЕ ПОЛЕВОЕ ОБУЧЕНИЕ
+					+e.H5.study-card-title ИНДИВИДУАЛЬНУЮ РАБОТУ,
+						br
+						| В ТОМ ЧИСЛЕ ПОЛЕВОЕ ОБУЧЕНИЕ
 		+e.directions
 			+e.H3.directions-title Мы реализуем программы обучения сотрудников по нескольким направлениям:
 			+e.directions-inner
@@ -28,7 +30,9 @@ if about ? about : about = []
 					+e.directions-item-icon
 						.icon.icon-circle-arrs
 					+e.directions-item-text
-						+e.P эффективное управление ресурсами компании
+						+e.P эффективное управление
+							br
+							| ресурсами компании
 				+e.directions-item
 					+e.directions-item-icon
 						.icon.icon-cursor
@@ -38,7 +42,9 @@ if about ? about : about = []
 					+e.directions-item-icon
 						.icon.icon-touch
 					+e.directions-item-text
-						+e.P информационные технологии, взаимодействие с клиентами
+						+e.P информационные технологии,
+							br
+							| взаимодействие с клиентами
 				+e.directions-item
 					+e.directions-item-icon
 						.icon.icon-magister

@@ -89,6 +89,11 @@ body
     .no-touch &:hover
       background: #fff
       color: #e38902
+  &_blue
+    padding: 19px 40px
+    background-color: #1b69ac
+    .no-touch &:hover
+      background: #e38902
   &_transparent
     padding: 7px 22px
     background-color: transparent
@@ -118,6 +123,8 @@ body
   +cover-img
   +md
     width: 100%
+  +xs
+    height: auto
   &::after, &::before
     position: absolute
     content: ''
@@ -140,8 +147,26 @@ body
   z-index: 1
   background: #1d71b8
   &::after
+    pointer-events: none
     +coverdiv
     z-index: -1
     opacity: .1
     content: ''
     background: url(../img/bg/success_bg.png) no-repeat 50% 50%/cover
+    
+.list-decor
+  padding-left: 35px
+  li
+    position: relative
+    padding-left: 15px
+    font-size: 18px
+    &::after
+      position: absolute
+      top: 6px
+      left: -16px
+      width: 10px
+      height: 10px
+      background-color: #f39200
+      content: ''
+    &:not(:first-child)
+      margin-top: 15px

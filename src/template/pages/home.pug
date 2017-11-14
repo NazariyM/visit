@@ -3,6 +3,17 @@ extends ../extend/default
 block variables
 	- var title = 'Визит';
 
+	-
+		navList = [
+		'Алгоритм работы',
+		'Экономия во всем',
+		'Пример подбора недвижимости',
+		'О компании',
+		'Отзывы',
+		'Контакты'
+		]
+	include ../components/header
+
 block main
 	main.content
 

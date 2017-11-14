@@ -35,17 +35,7 @@
 
 	+b.NAV.nav.js-nav
 		+e.UL.list.container
-			-
-				navList = [
-				'Алгоритм работы',
-				'Экономия во всем',
-				'Пример подбора недвижимости',
-				'О компании',
-				'Отзывы',
-				'Контакты'
-				]
 			for navLink, index in navList
-				-activeIndex = 1
 				li(class= index === activeIndex - 1 ? 'is-active' : ''): a(href='#!')= navLink
 
 		+b.contact-line._mobile

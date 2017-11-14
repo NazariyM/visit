@@ -1,0 +1,34 @@
+if programs ? programs : programs = []
+if programs.title ? programs.title : programs.title = 'ПРОГРАММЫ ОБУЧЕНИЯ'
+if programs.descr ? programs.descr : programs.descr = 'Значимой частью системы профессионального развития сотрудников АН «Визит» является обучение, которое реализуется в рамках следующих программ:'
+
+//begin programs
++b.SECTION.programs(class= programs.classMod ? programs.classMod : '')
+	+e.container.container
+		+e.H2.title.title-md= programs.title
+		+e.inner
+			+e.text
+				+e.P= programs.descr
+				+e.UL.list.list-decor
+					-
+						pogramsList = [
+						'Школа риэлтора;',
+						'Наставничество;',
+						'Холодные звонки;',
+						'Навыки эффективных продаж услуг собственнику;',
+						'Управленческие навыки;',
+						'Продажи по методу S.P.I.N.;',
+						'Командообразование;',
+						'и многое другое'
+						]
+					for pogramsListItem in pogramsList
+						+e.LI= pogramsListItem
+			+e.photos
+				+e.A.photos-item._md(href='static/img/content/programs-big.jpg' data-fancybox)
+					+e.DIV.photos-item-img(style='background-image: url(static/img/content/programs-1.jpg)')
+				+e.A.photos-item._sm(href='static/img/content/programs-big.jpg' data-fancybox)
+					+e.DIV.photos-item-img(style='background-image: url(static/img/content/rest-6.jpg)')
+				+e.A.photos-item._sm(href='static/img/content/programs-big.jpg' data-fancybox)
+					+e.DIV.photos-item-img(style='background-image: url(static/img/content/rest-8.jpg)')
+
+		+e.BUTTON.btn.btn._blue(type='button') ХОЧУ попасть на обучение

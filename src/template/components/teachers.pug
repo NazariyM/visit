@@ -5,16 +5,42 @@ if teachers.title ? teachers.title : teachers.title = 'УЧЕБНЫЙ ЦЕНТР
 +b.SECTION.teachers(class= teachers.classMod ? teachers.classMod : '')
 	+e.container.container
 		+b.H2.title-md= teachers.title
-		-
-			personsList = [
-			'Быкова Ирина',
-			'Лазарева Юлия',
-			'Фролова Людмила',
-			'Гориянова Ольга'
-			]
 		+e.persons-list
-			for personName, index in personsList
-				+e.person
+			+e.person(href='#!' data-popup-target='storyPopup')
+				+e.person-img-wrap.square-decor._l
 					+e.person-img
-						+e.IMG(src=`static/img/content/teachers-${index + 1}.jpg` alt='image')
-					+e.person-name= personName
+						+e.IMG(src='static/img/content/teachers-1.jpg' alt='image')
+				+e.person-name Быкова Ирина
+			+e.person(href='#!' data-popup-target='storyPopup')
+				+e.person-img-wrap.square-decor._l
+					+e.person-img
+						+e.IMG(src='static/img/content/teachers-2.jpg' alt='image')
+				+e.person-name Лазарева Юлия
+			+e.person(href='#!' data-popup-target='storyPopup')
+				+e.person-img-wrap.square-decor._r
+					+e.person-img
+						+e.IMG(src='static/img/content/teachers-3.jpg' alt='image')
+				+e.person-name Фролова Людмила
+			+e.person(href='#!' data-popup-target='storyPopup')
+				+e.person-img-wrap.square-decor._r
+					+e.person-img
+						+e.IMG(src='static/img/content/teachers-4.jpg' alt='image')
+				+e.person-name Гориянова Ольга
+
+	// begin teachers popup
+	+b.popup._story(data-popup-id='storyPopup', tabindex='-1', role='dialog')
+		+e.container
+			+e.close.js-popup-close
+				+i('close')
+			+e.person
+				+e.person-img
+					+e.IMG(src='static/img/content/success-julia.jpg' alt='image')
+				+e.person-text
+					+e.H6.person-name Юлия Хмелевская
+					+e.P Я работаю в АН «Визит» с 2005 года, так что меня можно считать заслуженным ветераном агентства. До того, как стать риелтором работала бухгалтером и в какой-то момент захотелось добавить в свою жизнь свежих красок, драйва и динамики.
+					+e.P Я давно присматривалась к сфере недвижимости, а там еще ситуация сложилась благоприятная: мы снимали квартиру, собирались приобретать жилье, и я решила, что, если устроюсь риелтором, все проблемы будут в одночасье решены. Собственно, так все и произошло.
+					+e.P Так получилось, что в один день у меня было собеседование в двух агентствах недвижимости, но представители «Визита» позвонили мне в тот же день, чтобы сообщить, что они готовы взять меня на работу. Я, конечно же, не раздумывая приняла предложение.
+					+e.P Когда я говорю, что проработала тринадцать лет на одном месте, многие мне не верят, но для меня «Визит» - это персональная зона комфорта. Мне здесь очень нравится, и я не хочу ничего менять в профессиональной деятельности.
+					+e.P У нас очень хороший и слаженный коллектив. Мне кажется, что это самое главное преимущество работы в «Визите». Именно благодаря атмосфере взаимопонимания, у меня ни разу не мелькнула мысль сменить место работы.
+					+e.P На сегодняшний день «Визит» - это лидер самарского рынка недвижимости и ощутимо опережает ближайших конкурентов в развитии. Лидерство проявляется не только в новых методиках и технологиях, которые мы берем на вооружение – у нас очень высокий средний уровень специалистов и самая, наверное, полная база объектов в городе.
+					+e.P Мне нравится моя работа, потому что в ней прекрасно сочетается свободный график и отсутствие границ для профессионального роста и заработка. Серьезно: главное в нашем деле не лениться.
